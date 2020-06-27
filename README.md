@@ -1,2 +1,3 @@
 # arnavthareja.github.io
-Personal Website
+My personal website  
+arnavthareja.github.io
