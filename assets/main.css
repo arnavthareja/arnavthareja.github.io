@@ -17,18 +17,19 @@ body {
 .profile {
     width: 100%;
     height: auto;
-    position: relative;
-    display: block;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
     background-color: #003262;
     color: white;
 }
 
 .profile-picture-container {
-    width: 40%;
+    flex: 4 4 40%;
+    max-width: 40%;
     height: 100%;
-    display: block;
-    float: left;
     box-sizing: border-box;
     padding: 4%;
     margin: 0;
@@ -38,17 +39,15 @@ body {
     border-radius: 50%;
     width: 60%;
     height: auto;
-    display: inline-block;
     box-shadow: 0 5px 20px black;
     margin-left: 30%;
 }
 
 .profile-description {
-    width: 60%;
+    flex: 6 6 60%;
+    max-width: 60%;
     height: 100%;
-    display: block;
-    float: right;
-    padding: 10% 10% 4% 4%;
+    padding: 4%;
     box-sizing: border-box;
     margin: auto;
     font-size: 20px;
@@ -57,26 +56,48 @@ body {
 .projects {
     width: 100%;
     height: auto;
-    position: relative;
-    display: block;
-    overflow: hidden;
+    text-align: center;
+    display: flex;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
     background-color: rgba(185, 164, 40, 0.568);
 }
 
-.project-card {
-    width: 30%;
+.projects h2 {
+    color: #003262;
+    font-size: 32px;
+    margin: 30px;
+}
+
+.project-container {
+    width: 100%;
     height: auto;
-    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    padding: 2% 5%;
+    padding-top: 0;
+    box-sizing: border-box;
+}
+
+.project-card {
+    flex: 1 1 27%;
+    max-width: 27%;
+    height: auto;
     border-radius: 10px;
     background-color: #003262;
     color: white;
-    display: inline-block;
+    margin: 1%;
 }
 
 .project-title {
     width: 100%;
     height: auto;
-    position: relative;
     background-color: white;
     color: black;
     border-top-left-radius: 10px;
@@ -84,14 +105,41 @@ body {
     padding: 1%;
     box-sizing: border-box;
     border: 1px solid #003262;
+    font-size: 18px;
 }
 
-.card-left {
-    float: left;
-    margin: 10% 5% 10% 15%;
+.project-description {
+    font-size: 16px;
+    color: white;
+    padding: 1%;
+    box-sizing: border-box;
 }
 
-.card-right {
-    float: right;
-    margin: 10% 15% 10% 5%;
+.ghost-card {
+    flex: 1 1 27%;
+    max-width: 27%;
+    height: auto;
+    border-radius: 10px;
+    background-color: transparent;
+    color: transparent;
+    margin: 1%;
+}
+
+.ghost-title {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    color: transparent;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 1%;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+.ghost-description {
+    font-size: 16px;
+    color: transparent;
+    padding: 1%;
+    box-sizing: border-box;
 }
