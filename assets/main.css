@@ -6,6 +6,7 @@
 html, body {
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -16,11 +17,12 @@ body {
 
 .profile {
     width: 100%;
-    height: auto;
+    height: 100vh;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
     align-items: center;
+    align-content: stretch;
     overflow: hidden;
     background-color: #003262;
     color: white;
@@ -29,7 +31,7 @@ body {
 .profile-picture-container {
     flex: 4 4 40%;
     max-width: 40%;
-    height: 100%;
+    height: auto;
     box-sizing: border-box;
     padding: 4%;
     margin: 0;
@@ -46,11 +48,50 @@ body {
 .profile-description {
     flex: 6 6 60%;
     max-width: 60%;
-    height: 100%;
+    height: auto;
     padding: 4%;
+    padding-right: 10%;
     box-sizing: border-box;
     margin: auto;
     font-size: 20px;
+}
+
+.down-arrow {
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+    align-self: flex-end;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#arrow-image {
+    width: 2.5vw;
+    height: auto;
+    transition: all 0.4s;
+}
+
+#arrow-image:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.down-arrow a {
+    color: white;
+    text-decoration: none;
+}
+
+.down-arrow a:link {
+    color: white;
+    text-decoration: none;
+}
+
+.down-arrow a:visited {
+    color: white;
+    text-decoration: none;
 }
 
 .projects {
@@ -68,8 +109,8 @@ body {
 
 .projects h2 {
     color: #003262;
-    font-size: 32px;
-    margin: 30px;
+    font-size: 44px;
+    margin: 80px;
 }
 
 .project-container {
@@ -78,7 +119,7 @@ body {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: stretch;
     align-content: center;
     padding: 2% 5%;
     padding-top: 0;
@@ -89,27 +130,41 @@ body {
     flex: 1 1 27%;
     max-width: 27%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: #003262;
     color: white;
     margin: 1%;
+    padding: 1%;
+    box-sizing: border-box;
+    box-shadow: 0 5px 20px black;
+}
+
+.project-image-container {
+    width: auto;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-image {
+    max-height: 99%;
+    max-width: 99%;
+    border: 2px solid white;
 }
 
 .project-title {
     width: 100%;
     height: auto;
-    background-color: white;
-    color: black;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    color: white;
     padding: 1%;
     box-sizing: border-box;
     border: 1px solid #003262;
-    font-size: 18px;
+    font-size: 30px;
 }
 
 .project-description {
-    font-size: 16px;
+    font-size: 17px;
     color: white;
     padding: 1%;
     box-sizing: border-box;
@@ -123,18 +178,17 @@ body {
     background-color: transparent;
     color: transparent;
     margin: 1%;
+    padding: 1%;
+    box-sizing: border-box;
 }
 
 .ghost-title {
     width: 100%;
     height: auto;
-    background-color: transparent;
     color: transparent;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
     padding: 1%;
     box-sizing: border-box;
-    font-size: 18px;
+    font-size: 22px;
 }
 
 .ghost-description {
