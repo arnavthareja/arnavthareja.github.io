@@ -1,0 +1,97 @@
+:root {
+    --background-color: white;
+    --text-color: black;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.profile {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    background-color: #003262;
+    color: white;
+}
+
+.profile-picture-container {
+    width: 40%;
+    height: 100%;
+    display: block;
+    float: left;
+    box-sizing: border-box;
+    padding: 4%;
+    margin: 0;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    width: 60%;
+    height: auto;
+    display: inline-block;
+    box-shadow: 0 5px 20px black;
+    margin-left: 30%;
+}
+
+.profile-description {
+    width: 60%;
+    height: 100%;
+    display: block;
+    float: right;
+    padding: 10% 10% 4% 4%;
+    box-sizing: border-box;
+    margin: auto;
+    font-size: 20px;
+}
+
+.projects {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    background-color: rgba(185, 164, 40, 0.568);
+}
+
+.project-card {
+    width: 30%;
+    height: auto;
+    position: relative;
+    border-radius: 10px;
+    background-color: #003262;
+    color: white;
+    display: inline-block;
+}
+
+.project-title {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-color: white;
+    color: black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 1%;
+    box-sizing: border-box;
+    border: 1px solid #003262;
+}
+
+.card-left {
+    float: left;
+    margin: 10% 5% 10% 15%;
+}
+
+.card-right {
+    float: right;
+    margin: 10% 15% 10% 5%;
+}
