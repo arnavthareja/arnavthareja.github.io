@@ -14,6 +14,6 @@ function select(id) {
     // update selected element
     selected = id;
 
-    // UPdate portfolio section title
+    // Update portfolio section title
     document.querySelector('#portfolio-title').innerHTML = selected;
 }
