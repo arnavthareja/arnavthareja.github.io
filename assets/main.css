@@ -13,6 +13,7 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow-x: hidden;
 }
 
 .profile {
@@ -52,6 +53,16 @@ body {
     box-sizing: border-box;
     margin: auto;
     font-size: 20px;
+}
+
+.icons a {
+    color: white;
+    margin-right: 5%;
+}
+
+.icons {
+    display: flex;
+    justify-content: flex-start;
 }
 
 .down-arrow {
@@ -106,6 +117,8 @@ body {
     width: 100%;
     height: 90%;
     margin: 5%;
+    padding: 5% 0%;
+    box-sizing: border-box;
     display: flex;
     flex-flow: column nowrap;
     align-items: stretch;
@@ -158,7 +171,7 @@ h2.menu.selected {
     text-decoration: underline #003262 solid;
 }
 
-.project-container {
+.Projects-container {
     width: 100%;
     height: auto;
     display: flex;

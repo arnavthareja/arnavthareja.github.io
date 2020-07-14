@@ -2,8 +2,10 @@
 <html>
     <head>
         <title>Arnav Thareja</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <link rel='stylesheet' href='assets/main.css'>
+        <link rel='stylesheet' type="text/css" href='assets/main.css'>
 
         <!-- Import AOS Library for card transitions -->
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -11,11 +13,15 @@
     <body>
         <div class='profile'>
             <div class='profile-picture-container'>
-                <img src='assets/arnav-pic.jpg' class='profile-picture disable-select disable-drag'>
+                <img src='assets/arnav-pic.jpg' class='profile-picture disable-select disable-drag' alt='Profile Picture' oncontextmenu="return false">
             </div>
             <div class='profile-description'>
                 <h1>Arnav Thareja</h1>
                 <p>Hi! I am a freshman at the University of Washington studying Computer Science in the Paul G. Allen School of Computer Science & Engineering.</p>
+                <div class="icons">
+                    <a target="_blank" href="https://www.linkedin.com/in/arnavthareja/"><i class="fa fa-linkedin-square fa-3x"></i></a>
+                    <a target="_blank" href="https://github.com/arnavthareja/"><i class="fa fa-github-square fa-3x"></i></a>
+                </div>
             </div>
             <div class='down-arrow'>
                 <a href='#portfolio'><img src='assets/down-arrow.png' id='arrow-image'></a>
@@ -23,14 +29,15 @@
         </div>
         <div class='portfolio-container' id='portfolio'>
             <div class='portfolio-menu'>
-                <h2 id='Projects' class='menu selected' onclick='select("Projects")'>Projects</h2>
+                <h2 id='Education' class='menu' onclick='select("Education")'>Education</h2>
                 <h2 id='Experience' class='menu' onclick='select("Experience")'>Experience</h2>
+                <h2 id='Projects' class='menu selected' onclick='select("Projects")'>Projects</h2>
                 <h2 id='Resume' class='menu' onclick='select("Resume")'>Resume</h2>
             </div>
             <h2 id='portfolio-title'>Projects</h2>
         </div>
         <div class='portfolio'>
-            <div class='project-container'>
+            <div class='Projects-container'>
                 <div class='project-card' data-aos='flip-left'>
                     <div class='project-image-container'>
                         <img src='assets/yearbook-2020-logo.png' class='project-image'>
@@ -54,7 +61,7 @@
                     </div>
                 </div>
                 
-                <!-- Ghost card for placeholder, uncomment if two cards on last line --
+                <!-- Ghost card for placeholder, uncomment if two cards on last line of multi-line projects tab --
                 <div class='ghost-card' data-aos='flip-left' data-aos-delay='100'>
                     <div class='ghost-image'>
 
@@ -76,6 +83,9 @@
 
         <!-- Link scripts -->
         <script src='assets/index.js'></script>
+
+        <!-- Import Fontawesome icons -->
+        <script src="https://use.fontawesome.com/b3e5314a5d.js"></script>
 
         <!-- Initialize AOS Library -->
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
