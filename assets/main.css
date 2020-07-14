@@ -104,11 +104,12 @@ body {
 .portfolio-menu {
     grid-area: menu;
     width: 100%;
-    height: auto;
+    height: 90%;
+    margin: 5%;
     display: flex;
     flex-flow: column nowrap;
     align-items: stretch;
-    justify-content: flex-start;
+    justify-content: center;
     border-right: 2px solid #003262;
 }
 
@@ -122,6 +123,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
     align-content: center;
+    background-color: rgba(185, 164, 40, 0.568);
 }
 
 h2.menu, #portfolio-title {
@@ -133,6 +135,10 @@ h2.menu, #portfolio-title {
 #portfolio-title {
     font-size: 44px;
     margin: 80px;
+    text-align: left;
+    justify-self: flex-start;
+    align-self: flex-start;
+    width: 100%;
 }
 
 h2.menu {
@@ -142,10 +148,6 @@ h2.menu {
     margin: 2%;
     box-sizing: border-box;
     font-variant: small-caps;
-}
-
-h2.menu#Projects {
-    margin-top: 20%;
 }
 
 h2.menu:hover {
