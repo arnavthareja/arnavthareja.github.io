@@ -91,23 +91,69 @@ body {
     text-decoration: none;
 }
 
-.projects {
+.portfolio-container {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    grid-template-areas: 'menu content';
+    align-content: center;
+    background-color: rgba(185, 164, 40, 0.568);
+}
+
+.portfolio-menu {
+    grid-area: menu;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    border-right: 2px solid #003262;
+}
+
+.portfolio {
+    grid-area: content;
     width: 100%;
     height: auto;
     text-align: center;
-    display: flex;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
     align-content: center;
-    background-color: rgba(185, 164, 40, 0.568);
 }
 
-.projects h2 {
+h2.menu, #portfolio-title {
     color: #003262;
+    display: inline;
+    text-decoration: none;
+}
+
+#portfolio-title {
     font-size: 44px;
     margin: 80px;
+}
+
+h2.menu {
+    text-align: left;
+    font-size: 24px;
+    padding: 1% 10%;
+    margin: 2%;
+    box-sizing: border-box;
+    font-variant: small-caps;
+}
+
+h2.menu#Projects {
+    margin-top: 20%;
+}
+
+h2.menu:hover {
+    cursor: pointer;
+}
+
+h2.menu.selected {
+    text-decoration: underline #003262 solid;
 }
 
 .project-container {
