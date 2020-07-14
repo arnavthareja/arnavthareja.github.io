@@ -11,75 +11,83 @@
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     </head>
     <body>
-        <div class='profile'>
-            <div class='profile-picture-container'>
-                <img src='assets/arnav-pic.jpg' class='profile-picture disable-select disable-drag' alt='Profile Picture' oncontextmenu="return false">
-            </div>
-            <div class='profile-description'>
-                <h1>Arnav Thareja</h1>
-                <p>Hi! I am a freshman at the University of Washington studying Computer Science in the Paul G. Allen School of Computer Science & Engineering.</p>
-                <div class="icons">
-                    <a target="_blank" href="https://www.linkedin.com/in/arnavthareja/"><i class="fa fa-linkedin-square fa-3x"></i></a>
-                    <a target="_blank" href="https://github.com/arnavthareja/"><i class="fa fa-github-square fa-3x"></i></a>
-                </div>
-            </div>
-            <div class='down-arrow'>
-                <a href='#portfolio'><img src='assets/down-arrow.png' id='arrow-image'></a>
-            </div>
-        </div>
-        <div class='portfolio-container' id='portfolio'>
-            <div class='portfolio-menu'>
-                <h2 id='Education' class='menu' onclick='select("Education")'>Education</h2>
-                <h2 id='Experience' class='menu' onclick='select("Experience")'>Experience</h2>
-                <h2 id='Projects' class='menu selected' onclick='select("Projects")'>Projects</h2>
-                <h2 id='Resume' class='menu' onclick='select("Resume")'>Resume</h2>
-            </div>
-            <h2 id='portfolio-title'>Projects</h2>
-        </div>
-        <div class='portfolio'>
-            <div class='Projects-container'>
-                <div class='project-card' data-aos='flip-left'>
-                    <div class='project-image-container'>
-                        <img src='assets/yearbook-2020-logo.png' class='project-image'>
-                    </div>
-                    <div class='project-title'>
-                        <p>Yearbook 2020</p>
-                    </div>
-                    <div class='project-description'>
-                        <p>An online app designed to keep students connected during COVID-19 quarantines. Each student gets a virtual yearbook page that others can sign, and they can sign others' yearbook pages.</p>
+        <div class='parallax-container'>
+            <div class='parallax-group'>
+                <div class='parallax-layer background'>
+                    <div class='profile'>
+                        <div class='profile-picture-container'>
+                            <img src='assets/arnav-pic.jpg' class='profile-picture disable-select disable-drag' alt='Profile Picture' oncontextmenu="return false">
+                        </div>
+                        <div class='profile-description'>
+                            <h1>Arnav Thareja</h1>
+                            <p>Hi! I am a freshman at the University of Washington studying Computer Science in the Paul G. Allen School of Computer Science & Engineering.</p>
+                            <div class="icons">
+                                <a target="_blank" href="https://www.linkedin.com/in/arnavthareja/"><i class="fa fa-linkedin-square fa-3x"></i></a>
+                                <a target="_blank" href="https://github.com/arnavthareja/"><i class="fa fa-github-square fa-3x"></i></a>
+                            </div>
+                        </div>
+                        <div class='down-arrow'>
+                            <a href='#portfolio'><img src='assets/down-arrow.png' id='arrow-image'></a>
+                        </div>
                     </div>
                 </div>
-                <div class='project-card' data-aos='flip-left' data-aos-delay='100'>
-                    <div class='project-image-container'>
-                        <img src='assets/table-tennis-logo.PNG' class='project-image'>
+                <div class='parallax-layer foreground'>
+                    <div class='portfolio-container' id='portfolio'>
+                        <div class='portfolio-menu'>
+                            <h2 id='Education' class='menu' onclick='select("Education")'>Education</h2>
+                            <h2 id='Experience' class='menu' onclick='select("Experience")'>Experience</h2>
+                            <h2 id='Projects' class='menu selected' onclick='select("Projects")'>Projects</h2>
+                            <h2 id='Resume' class='menu' onclick='select("Resume")'>Resume</h2>
+                        </div>
+                        <h2 id='portfolio-title'>Projects</h2>
                     </div>
-                    <div class='project-title'>
-                        <p>Table Tennis Sign-In</p>
-                    </div>
-                    <div class='project-description'>
-                        <p>A Java app to enable a quick and paperless sign-in process for Hazen High School's Table Tennis Club. Uses the Google Sheets API to upload sign-in records to the club's Google Sheet for membership tracking and analytics.</p>
-                    </div>
-                </div>
-                
-                <!-- Ghost card for placeholder, uncomment if two cards on last line of multi-line projects tab --
-                <div class='ghost-card' data-aos='flip-left' data-aos-delay='100'>
-                    <div class='ghost-image'>
+                    <div class='portfolio'>
+                        <div class='Projects-container'>
+                            <div class='project-card' data-aos='flip-left'>
+                                <div class='project-image-container'>
+                                    <img src='assets/yearbook-2020-logo.png' class='project-image'>
+                                </div>
+                                <div class='project-title'>
+                                    <p>Yearbook 2020</p>
+                                </div>
+                                <div class='project-description'>
+                                    <p>An online app designed to keep students connected during COVID-19 quarantines. Each student gets a virtual yearbook page that others can sign, and they can sign others' yearbook pages.</p>
+                                </div>
+                            </div>
+                            <div class='project-card' data-aos='flip-left' data-aos-delay='100'>
+                                <div class='project-image-container'>
+                                    <img src='assets/table-tennis-logo.PNG' class='project-image'>
+                                </div>
+                                <div class='project-title'>
+                                    <p>Table Tennis Sign-In</p>
+                                </div>
+                                <div class='project-description'>
+                                    <p>A Java app to enable a quick and paperless sign-in process for Hazen High School's Table Tennis Club. Uses the Google Sheets API to upload sign-in records to the club's Google Sheet for membership tracking and analytics.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Ghost card for placeholder, uncomment if two cards on last line of multi-line projects tab --
+                            <div class='ghost-card' data-aos='flip-left' data-aos-delay='100'>
+                                <div class='ghost-image'>
 
+                                </div>
+                                <div class='ghost-title'>
+                                    <p>Project Title</p>
+                                </div>
+                                <div class='ghost-description'>
+                                    <p>Project Description</p>
+                                </div>
+                            </div>
+                            <-- -->
+                        </div>
                     </div>
-                    <div class='ghost-title'>
-                        <p>Project Title</p>
-                    </div>
-                    <div class='ghost-description'>
-                        <p>Project Description</p>
-                    </div>
+
+                    <footer>
+                        <p>&copy; 2020 Arnav Thareja. All rights reserved.</p>
+                    </footer>
                 </div>
-                <-- -->
             </div>
         </div>
-
-        <footer>
-            <p>&copy; 2020 Arnav Thareja. All rights reserved.</p>
-        </footer>
 
         <!-- Link scripts -->
         <script src='assets/index.js'></script>
@@ -91,6 +99,7 @@
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
             AOS.init();
+            document.body.querySelector('.foreground').addEventListener('scroll', AOS.refresh());
         </script>
     </body>
 </html>
