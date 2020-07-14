@@ -30,7 +30,6 @@ body {
 
 .profile-picture-container {
     flex: 4 4 40%;
-    max-width: 40%;
     height: auto;
     box-sizing: border-box;
     padding: 4%;
@@ -39,15 +38,14 @@ body {
 
 .profile-picture {
     border-radius: 50%;
-    width: 60%;
+    width: 70%;
     height: auto;
     box-shadow: 0 5px 20px black;
-    margin-left: 30%;
+    margin-left: 20%;
 }
 
 .profile-description {
     flex: 6 6 60%;
-    max-width: 60%;
     height: auto;
     padding: 4%;
     padding-right: 10%;
@@ -58,7 +56,6 @@ body {
 
 .down-arrow {
     flex: 0 0 100%;
-    max-width: 100%;
     height: auto;
     text-align: center;
     align-self: flex-end;
@@ -197,4 +194,33 @@ body {
     color: transparent;
     padding: 1%;
     box-sizing: border-box;
+}
+
+.disable-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+
+.disable-drag{
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
+
+footer {
+    background-color: #003262;
+    color: white;
+    text-align: center;
+    padding: 1%;
+    box-sizing: border-box;
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
 }
