@@ -106,24 +106,27 @@ body {
     width: 100%;
     height: auto;
     display: grid;
-    grid-template-columns: 15% 85%;
-    grid-template-areas: 'menu content';
+    grid-template-columns: 20% 80%;
+    grid-template-rows: auto auto;
+    grid-template-areas: 'menu title' '. content';
     align-content: center;
-    background-color: rgba(185, 164, 40, 0.568);
+    background-color: #d7cb84;
 }
 
 .portfolio-menu {
     grid-area: menu;
     width: 100%;
-    height: 90%;
-    margin: 5%;
-    padding: 5% 0%;
+    height: auto;
+    margin: 5% 5% 5% 0;
+    padding: 0%;
     box-sizing: border-box;
     display: flex;
     flex-flow: column nowrap;
     align-items: stretch;
     justify-content: center;
     border-right: 2px solid #003262;
+    position: sticky;
+    top: 10%;
 }
 
 .portfolio {
@@ -136,7 +139,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
     align-content: center;
-    background-color: rgba(185, 164, 40, 0.568);
+    background-color: #d7cb84;
 }
 
 h2.menu, #portfolio-title {
@@ -152,47 +155,51 @@ h2.menu, #portfolio-title {
     justify-self: flex-start;
     align-self: flex-start;
     width: 100%;
+    grid-area: title;
 }
 
 h2.menu {
     text-align: left;
     font-size: 24px;
-    padding: 1% 10%;
-    margin: 2%;
+    padding: 3% 10%;
+    margin: 0;
     box-sizing: border-box;
     font-variant: small-caps;
+    width: 100%;
+    text-align: left;
+    background-color: transparent;
 }
 
 h2.menu:hover {
     cursor: pointer;
+    background-color: rgba(0, 51, 98, 0.1);
 }
 
 h2.menu.selected {
-    text-decoration: underline #003262 solid;
+    background-color: rgba(0, 51, 98, 0.2);
 }
 
 .Projects-container {
     width: 100%;
     height: auto;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-items: stretch;
-    align-content: center;
+    display: grid;
+    grid-gap: 3vw;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    grid-auto-flow: row;
     padding: 2% 5%;
     padding-top: 0;
     box-sizing: border-box;
 }
 
 .project-card {
-    flex: 1 1 27%;
-    max-width: 27%;
-    height: auto;
+    width: 100%;
+    height: 100%;
     border-radius: 20px;
     background-color: #003262;
     color: white;
     margin: 1%;
-    padding: 1%;
+    padding: 4%;
     box-sizing: border-box;
     box-shadow: 0 5px 20px black;
 }
@@ -203,6 +210,7 @@ h2.menu.selected {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 1% 0;
 }
 
 .project-image {
@@ -217,8 +225,11 @@ h2.menu.selected {
     color: white;
     padding: 1%;
     box-sizing: border-box;
-    border: 1px solid #003262;
     font-size: 30px;
+}
+
+.project-title p {
+    margin: 5% 0;
 }
 
 .project-description {
