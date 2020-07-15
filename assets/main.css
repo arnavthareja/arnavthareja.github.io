@@ -149,14 +149,20 @@ h2.menu, #portfolio-title {
     text-decoration: none;
 }
 
+.title-container {
+    grid-area: title;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
 #portfolio-title {
     font-size: 44px;
-    margin: 80px;
+    margin: 6vh 3vw;
     text-align: left;
     justify-self: flex-start;
-    align-self: flex-start;
     width: 100%;
-    grid-area: title;
 }
 
 h2.menu {
