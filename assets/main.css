@@ -1,6 +1,9 @@
 :root {
-    --background-color: white;
-    --text-color: black;
+    --main-background-color: #003262; /* dark mode: black */
+    --main-text-color: white; /* dark mode: white */
+    --alt-background-color: #d7cb84; /* dark mode: black */
+    --alt-text-color: #003262; /* dark mode: white */
+    --box-shadow: 0 5px 20px black; /* dark mode: 0 0 5px white */
 }
 
 html, body {
@@ -10,8 +13,6 @@ html, body {
 }
 
 body {
-    background-color: var(--background-color);
-    color: var(--text-color);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     overflow-x: hidden;
 }
@@ -25,8 +26,8 @@ body {
     align-items: center;
     align-content: stretch;
     overflow: hidden;
-    background-color: #003262;
-    color: white;
+    background-color: var(--main-background-color);
+    color: var(--main-text-color);
 }
 
 .profile-picture-container {
@@ -41,7 +42,7 @@ body {
     border-radius: 50%;
     width: 70%;
     height: auto;
-    box-shadow: 0 5px 20px black;
+    box-shadow: var(--box-shadow);
     margin-left: 20%;
 }
 
@@ -56,7 +57,7 @@ body {
 }
 
 .icons a {
-    color: white;
+    color: var(--main-text-color);
     margin-right: 5%;
 }
 
@@ -88,17 +89,17 @@ body {
 }
 
 .down-arrow a {
-    color: white;
+    color: var(--main-text-color);
     text-decoration: none;
 }
 
 .down-arrow a:link {
-    color: white;
+    color: var(--main-text-color);
     text-decoration: none;
 }
 
 .down-arrow a:visited {
-    color: white;
+    color: var(--main-text-color);
     text-decoration: none;
 }
 
@@ -110,7 +111,7 @@ body {
     grid-template-rows: auto auto;
     grid-template-areas: 'menu title' '. content';
     align-content: center;
-    background-color: #d7cb84;
+    background-color: var(--alt-background-color);
 }
 
 .portfolio-menu {
@@ -124,7 +125,7 @@ body {
     flex-flow: column nowrap;
     align-items: stretch;
     justify-content: center;
-    border-right: 2px solid #003262;
+    border-right: 2px solid var(--alt-text-color);
     position: sticky;
     top: 10%;
 }
@@ -139,11 +140,11 @@ body {
     justify-content: space-evenly;
     align-items: center;
     align-content: center;
-    background-color: #d7cb84;
+    background-color: var(--alt-background-color);
 }
 
 h2.menu, #portfolio-title {
-    color: #003262;
+    color: var(--alt-text-color);
     display: inline;
     text-decoration: none;
 }
@@ -172,11 +173,11 @@ h2.menu {
 
 h2.menu:hover {
     cursor: pointer;
-    background-color: rgba(0, 51, 98, 0.1);
+    background-color: rgba(0, 51, 98, 0.1); /* alt text color with alpha of 0.1 */
 }
 
 h2.menu.selected {
-    background-color: rgba(0, 51, 98, 0.2);
+    background-color: rgba(0, 51, 98, 0.2); /* alt text color with alpha of 0.2 */
 }
 
 .Projects-container {
@@ -196,12 +197,12 @@ h2.menu.selected {
     width: 100%;
     height: 100%;
     border-radius: 20px;
-    background-color: #003262;
-    color: white;
+    background-color: var(--main-background-color);
+    color: var(--main-text-color);
     margin: 1%;
     padding: 4%;
     box-sizing: border-box;
-    box-shadow: 0 5px 20px black;
+    box-shadow: var(--box-shadow);
 }
 
 .project-image-container {
@@ -222,7 +223,7 @@ h2.menu.selected {
 .project-title {
     width: 100%;
     height: auto;
-    color: white;
+    color: var(--main-text-color);
     padding: 1%;
     box-sizing: border-box;
     font-size: 30px;
@@ -234,7 +235,7 @@ h2.menu.selected {
 
 .project-description {
     font-size: 17px;
-    color: white;
+    color: var(--main-text-color);
     padding: 1%;
     box-sizing: border-box;
     text-align: left;
@@ -285,8 +286,8 @@ h2.menu.selected {
 }
 
 footer {
-    background-color: #003262;
-    color: white;
+    background-color: var(--main-background-color);
+    color: var(--main-text-color);
     text-align: center;
     padding: 1%;
     box-sizing: border-box;
