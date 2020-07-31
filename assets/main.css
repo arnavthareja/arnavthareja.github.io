@@ -293,34 +293,6 @@ h2.menu.selected {
     text-align: left;
 }
 
-.ghost-card {
-    flex: 1 1 27%;
-    max-width: 27%;
-    height: auto;
-    border-radius: 10px;
-    background-color: transparent;
-    color: transparent;
-    margin: 1%;
-    padding: 1%;
-    box-sizing: border-box;
-}
-
-.ghost-title {
-    width: 100%;
-    height: auto;
-    color: transparent;
-    padding: 1%;
-    box-sizing: border-box;
-    font-size: 22px;
-}
-
-.ghost-description {
-    font-size: 16px;
-    color: transparent;
-    padding: 1%;
-    box-sizing: border-box;
-}
-
 .disable-select {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
