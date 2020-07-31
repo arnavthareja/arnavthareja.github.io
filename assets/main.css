@@ -38,12 +38,25 @@ body {
     margin: 0;
 }
 
+@keyframes picture-fly-in {
+    from { transform: translateX(-40vw); }
+    to { transform: translateX(0); }
+}
+
 .profile-picture {
     border-radius: 50%;
     width: 70%;
     height: auto;
-    box-shadow: var(--box-shadow);
+    box-shadow: 0 0 10px black;
+    border: 1.5px solid var(--main-text-color);
     margin-left: 20%;
+    box-sizing: border-box;
+    animation: picture-fly-in 0.4s ease-out;
+}
+
+@keyframes profile-fly-in {
+    from { transform: translateX(60vw); }
+    to { transform:translateX(0); }
 }
 
 .profile-description {
@@ -54,16 +67,41 @@ body {
     box-sizing: border-box;
     margin: auto;
     font-size: 20px;
+    animation: profile-fly-in 0.4s ease-out;
+}
+
+.icons a .icon {
+    color: var(--main-text-color);
+    height: 3.5em;
+    width: 3.5em;
+    border-radius: 50%;
+    border: 1px solid var(--main-text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.icons a .icon:hover {
+    cursor: pointer;
+    border: 2px solid var(--main-text-color);
 }
 
 .icons a {
     color: var(--main-text-color);
+    transition: color 0.5s;
     margin-right: 5%;
+    text-decoration: none;
 }
 
 .icons {
     display: flex;
     justify-content: flex-start;
+}
+
+@keyframes arrow-fly-in {
+    from { transform: translateY(20vh) }
+    to { transform: translateY(0); }
 }
 
 .down-arrow {
@@ -75,12 +113,19 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: arrow-fly-in 0.4s ease-out;
+}
+
+@keyframes bounce {
+    0%, 12%, 38%, 50%, 100% { transform: translateY(0); }
+    25% { transform: translateY(10px); }
 }
 
 #arrow-image {
     width: 2.5vw;
     height: auto;
     transition: all 0.4s;
+    animation: bounce 4s 1s infinite;
 }
 
 #arrow-image:hover {
@@ -223,6 +268,7 @@ h2.menu.selected {
 .project-image {
     max-height: 99%;
     max-width: 99%;
+    border-radius: 5px;
     border: 2px solid white;
 }
 
