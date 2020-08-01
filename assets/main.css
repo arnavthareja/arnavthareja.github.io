@@ -41,7 +41,7 @@ body {
     margin: 0;
 }
 
-@keyframes picture-fly-in-Y {
+@keyframes picture-fly-in {
     from { transform: translateY(90vh); }
     to { transform: translateY(0); }
 }
@@ -54,7 +54,7 @@ body {
     border: 1.5px solid var(--main-text-color);
     margin-left: 20%;
     box-sizing: border-box;
-    animation: picture-fly-in-Y var(--fly-in-duration) var(--fly-in-timing-function);
+    animation: picture-fly-in var(--fly-in-duration) var(--fly-in-timing-function);
 }
 
 @keyframes profile-fly-in {
