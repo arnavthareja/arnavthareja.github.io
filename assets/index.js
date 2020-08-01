@@ -14,9 +14,6 @@ function select(id) {
 
     // update selected element
     selected = id;
-
-    // Update portfolio section title
-    document.querySelector('#portfolio-title').innerHTML = selected;
 }
 
 function toggleDarkMode() {

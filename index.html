@@ -33,10 +33,10 @@
         <div class='portfolio-container' id='portfolio'>
             <div class='portfolio-menu'>
                 <!-- TODO: Change to links to scroll down to specified sections and highlight link when scrolled to that section -->
-                <h2 id='Education' class='menu' onclick='select("Education")'>Education</h2>
-                <h2 id='Experience' class='menu' onclick='select("Experience")'>Experience</h2>
-                <h2 id='Projects' class='menu selected' onclick='select("Projects")'>Projects</h2>
-                <h2 id='Resume' class='menu' onclick='select("Resume")'>Resume</h2>
+                <button type="button" id='Experience' class='menu' onclick='select("Experience")'><a href='#experience'><h2>Experience</h2></a></button>
+                <button type="button" id='Projects' class='menu selected' onclick='select("Projects")'><a href='#projects'><h2>Projects</h2></a></button>
+                <button type="button" id='Coursework' class='menu' onclick='select("Coursework")'><a href='#coursework'><h2>Coursework</h2></a></button>
+                <button type="button" id='Resume' class='menu' onclick='select("Resume")'><a href='#resume'><h2>Resume</h2></a></button>
             </div>
 
             <div class='title-container'>
@@ -44,7 +44,7 @@
             </div>
 
             <div class='portfolio'>
-                <div class='Projects-container'>
+                <div class='Projects-container' id='projects'>
                     <div class='project-card' data-aos='flip-left'>
                         <div class='project-image-container'>
                             <img src='assets/yearbook-2020-logo.png' class='project-image'>
