@@ -45,11 +45,6 @@ body {
     to { transform: translateY(0); }
 }
 
-@keyframes picture-fly-in-X {
-    from { transform: translateX(-40vw); }
-    to { transform: translateX(0); }
-}
-
 .profile-picture {
     border-radius: 50%;
     width: 70%;
@@ -107,7 +102,7 @@ body {
 }
 
 @keyframes arrow-fly-in {
-    from { transform: translateY(20vh) }
+    from { transform: translateY(20vh); }
     to { transform: translateY(0); }
 }
 
@@ -123,16 +118,16 @@ body {
     animation: arrow-fly-in var(--fly-in-duration) var(--fly-in-timing-function);
 }
 
-@keyframes bounce {
-    0%, 12%, 38%, 50%, 100% { transform: translateY(0); }
-    25% { transform: translateY(10px); }
+@keyframes arrow-bounce {
+    0%, 50%, 62%, 88%, 100% { transform: translateY(0); }
+    75% { transform: translateY(10px); }
 }
 
 #arrow-image {
     width: 2.5vw;
     height: auto;
     transition: all 0.4s;
-    animation: bounce 4s 1s infinite;
+    animation: arrow-bounce 4s 1s infinite;
 }
 
 #arrow-image:hover {
