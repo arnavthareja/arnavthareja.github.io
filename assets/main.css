@@ -79,9 +79,6 @@ body {
     width: 3.5em;
     border-radius: 50%;
     border: 1px solid var(--main-text-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     box-sizing: border-box;
 }
 
@@ -113,9 +110,6 @@ body {
     text-align: center;
     align-self: flex-end;
     margin-bottom: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     animation: arrow-fly-in var(--fly-in-duration) var(--fly-in-timing-function);
 }
 
@@ -157,10 +151,6 @@ body {
     margin: 5% 5% 5% 0;
     padding: 0%;
     box-sizing: border-box;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: stretch;
-    justify-content: center;
     border-right: 2px solid var(--alt-text-color);
     position: sticky;
     top: 10%;
@@ -242,16 +232,32 @@ button.menu.selected {
     background: rgba(0, 51, 98, 0.2); /* alt text color with alpha of 0.2 */
 }
 
-.Projects-container {
+.section-container {
     width: 100%;
     height: auto;
+    padding: 0 5% 2% 5%;
+    box-sizing: border-box;
+}
+
+.grid-3 {
     display: grid;
     grid-gap: 3vw;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 1fr;
     grid-auto-flow: row;
-    padding: 0 5% 2% 5%;
-    box-sizing: border-box;
+}
+
+.flex-vertical {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .project-card {
@@ -273,9 +279,6 @@ button.menu.selected {
 .project-image-container {
     width: auto;
     height: 20vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 1% 0;
 }
 
