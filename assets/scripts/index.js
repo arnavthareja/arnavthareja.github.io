@@ -18,6 +18,8 @@ function select(id) {
 
 function toggleDarkMode() {
 
+    // TODO: Also change portfolio menu buttons highlighted and selected
+
     const root = document.documentElement;
 
     if (darkModeActive) {
