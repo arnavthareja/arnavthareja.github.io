@@ -1,3 +1,45 @@
+@mixin custom-scrollbar($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+    // For Webkit browsers
+    &::-webkit-scrollbar {
+        width:  $size;
+        height: 100%;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+        background: $foreground-color;
+    }
+  
+    &::-webkit-scrollbar-track {
+        background: $background-color;
+    }
+  
+    // For Internet Explorer
+    & {
+        scrollbar-face-color: $foreground-color;
+        scrollbar-track-color: $background-color;
+    }
+}
+
+@keyframes picture-fly-in {
+    from { transform: translateY(90vh); }
+    to { transform: translateY(0); }
+}
+
+@keyframes profile-fly-in {
+    from { transform: translateX(60vw); }
+    to { transform:translateX(0); }
+}
+
+@keyframes arrow-fly-in {
+    from { transform: translateY(20vh); }
+    to { transform: translateY(0); }
+}
+
+@keyframes arrow-bounce {
+    0%, 50%, 62%, 88%, 100% { transform: translateY(0) rotate(45deg); }
+    75% { transform: translateY(10px) rotate(45deg); }
+}
+
 :root {
     --main-background-color: #003262; /* dark mode: black */
     --main-text-color: white; /* dark mode: white */
@@ -22,6 +64,7 @@ html, body {
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     overflow-x: hidden;
+    @include custom-scrollbar(0.8%, #9e9ebe);
 }
 
 .profile {
@@ -33,7 +76,7 @@ body {
     align-items: center;
     align-content: stretch;
     overflow: hidden;
-    background: var(--main-background-gradient);
+    background: transparent;
     color: var(--main-text-color);
 }
 
@@ -43,11 +86,6 @@ body {
     box-sizing: border-box;
     padding: 4%;
     margin: 0;
-}
-
-@keyframes picture-fly-in {
-    from { transform: translateY(90vh); }
-    to { transform: translateY(0); }
 }
 
 .profile-picture {
@@ -61,11 +99,6 @@ body {
     animation: picture-fly-in var(--fly-in-duration) var(--fly-in-timing-function);
 }
 
-@keyframes profile-fly-in {
-    from { transform: translateX(60vw); }
-    to { transform:translateX(0); }
-}
-
 .profile-description {
     flex: 6 6 60%;
     height: auto;
@@ -77,35 +110,30 @@ body {
     animation: profile-fly-in var(--fly-in-duration) var(--fly-in-timing-function);
 }
 
-.icons a .icon {
-    color: var(--main-text-color);
-    height: 3.5em;
-    width: 3.5em;
-    border-radius: 50%;
-    border: 1px solid var(--main-text-color);
-    box-sizing: border-box;
-}
-
-.icons a .icon:hover {
-    cursor: pointer;
-    border: 2px solid var(--main-text-color);
-}
-
-.icons a {
-    color: var(--main-text-color);
-    transition: color 0.5s;
-    margin-right: 5%;
-    text-decoration: none;
-}
-
 .icons {
     display: flex;
     justify-content: flex-start;
-}
 
-@keyframes arrow-fly-in {
-    from { transform: translateY(20vh); }
-    to { transform: translateY(0); }
+    a {
+        color: var(--main-text-color);
+        transition: color 0.5s;
+        margin-right: 5%;
+        text-decoration: none;
+
+        .icon {
+            color: var(--main-text-color);
+            height: 3.5em;
+            width: 3.5em;
+            border-radius: 50%;
+            border: 1px solid var(--main-text-color);
+            box-sizing: border-box;
+
+            &:hover {
+                cursor: pointer;
+                border: 2px solid var(--main-text-color);
+            }
+        }
+    }
 }
 
 .down-arrow {
@@ -117,11 +145,6 @@ body {
     animation: arrow-fly-in var(--fly-in-duration) var(--fly-in-timing-function);
 }
 
-@keyframes arrow-bounce {
-    0%, 50%, 62%, 88%, 100% { transform: translateY(0) rotate(45deg); }
-    75% { transform: translateY(10px) rotate(45deg); }
-}
-
 .arrow {
     width: 2vw;
     height: 2vw;
@@ -130,11 +153,11 @@ body {
     border-color: var(--main-text-color);
     transform: rotate(45deg);
     animation: arrow-bounce 4s 1s infinite;
-}
 
-.arrow:hover {
-    border-width: 0 3.5px 3.5px 0;
-    cursor: pointer;
+    &:hover {
+        border-width: 0 3.5px 3.5px 0;
+        cursor: pointer;
+    }
 }
 
 .portfolio-container {
@@ -203,37 +226,37 @@ button.menu {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-}
 
-button.menu:hover {
-    cursor: pointer;
-    background: rgba(0, 51, 98, 0.1); /* alt text color with alpha of 0.1 */
-}
+    &:hover {
+        cursor: pointer;
+        background: rgba(0, 51, 98, 0.1); /* alt text color with alpha of 0.1 */
+    }
 
-button.menu:focus {
-    outline: none;
-}
+    &:focus {
+        outline: none;
+    }
 
-button.menu a {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
+    &.selected {
+        background: rgba(0, 51, 98, 0.2); /* alt text color with alpha of 0.2 */
+    }
 
-button.menu a h2 {
-    display: inline-block;
-    text-align: left;
-    font-size: 24px;
-    padding: 3% 10%;
-    margin: 0;
-    box-sizing: border-box;
-    font-variant: small-caps;
-    width: 100%;
-    height: 100%;
-}
+    a {
+        display: block;
+        width: 100%;
+        height: 100%;
 
-button.menu.selected {
-    background: rgba(0, 51, 98, 0.2); /* alt text color with alpha of 0.2 */
+        h2 {
+            display: inline-block;
+            text-align: left;
+            font-size: 24px;
+            padding: 3% 10%;
+            margin: 0;
+            box-sizing: border-box;
+            font-variant: small-caps;
+            width: 100%;
+            height: 100%;
+        }
+    }
 }
 
 .section-container {
