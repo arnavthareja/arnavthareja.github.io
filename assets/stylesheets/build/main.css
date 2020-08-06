@@ -55,10 +55,10 @@ body {
   body::-webkit-scrollbar-thumb {
     background: #9e9ebe; }
   body::-webkit-scrollbar-track {
-    background: #cfcfdf; }
+    background: #cfcfcf; }
   body {
     scrollbar-face-color: #9e9ebe;
-    scrollbar-track-color: #cfcfdf; }
+    scrollbar-track-color: #cfcfcf; }
 
 .profile {
   width: 100%;
@@ -256,9 +256,8 @@ button.menu {
   padding: 4%;
   box-sizing: border-box;
   box-shadow: var(--box-shadow); }
-
-.project-card a {
-  color: inherit; }
+  .project-card a {
+    color: inherit; }
 
 .project-image-container {
   width: auto;
@@ -277,9 +276,8 @@ button.menu {
   padding: 1%;
   box-sizing: border-box;
   font-size: 30px; }
-
-.project-title p {
-  margin: 5% 0; }
+  .project-title p {
+    margin: 5% 0; }
 
 .project-description {
   font-size: 17px;
@@ -307,7 +305,6 @@ footer {
   text-align: center;
   padding: 1%;
   box-sizing: border-box; }
-
-footer p {
-  margin: 0;
-  padding: 0; }
+  footer p {
+    margin: 0;
+    padding: 0; }

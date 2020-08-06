@@ -64,7 +64,7 @@ html, body {
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     overflow-x: hidden;
-    @include custom-scrollbar(0.8%, #9e9ebe);
+    @include custom-scrollbar(0.8%, #9e9ebe, mix(#9e9e9e, white, 50%));
 }
 
 .profile {
@@ -297,10 +297,10 @@ button.menu {
     padding: 4%;
     box-sizing: border-box;
     box-shadow: var(--box-shadow);
-}
 
-.project-card a {
-    color: inherit;
+    a {
+        color: inherit;
+    }
 }
 
 .project-image-container {
@@ -322,10 +322,10 @@ button.menu {
     padding: 1%;
     box-sizing: border-box;
     font-size: 30px;
-}
 
-.project-title p {
-    margin: 5% 0;
+    p {
+        margin: 5% 0;
+    }
 }
 
 .project-description {
@@ -344,7 +344,7 @@ button.menu {
     user-select: none; 
 }
 
-.disable-drag{
+.disable-drag {
     -webkit-user-drag: none;
     -khtml-user-drag: none;
     -moz-user-drag: none;
@@ -357,9 +357,9 @@ footer {
     text-align: center;
     padding: 1%;
     box-sizing: border-box;
-}
 
-footer p {
-    margin: 0;
-    padding: 0;
+    p {
+        margin: 0;
+        padding: 0;
+    }
 }
