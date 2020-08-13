@@ -21,7 +21,7 @@
 }
 
 @mixin font-size($size) {
-    font-size: calc(#{$size} * var(--width-percent));
+    font-size: calc(#{$size} * var(--width-ratio));
 }
 
 @keyframes picture-fly-in {
@@ -53,8 +53,8 @@
     --box-shadow: 0 5px 15px black; /* dark mode: 0 0 5px white */
     --fly-in-duration: 0.6s;
     --fly-in-timing-function: cubic-bezier(0.27, 0.57, 0.54, 1.02);
-    --width-percent: 1;
-    --height-percent: 1;
+    --width-ratio: 1;
+    --height-ratio: 1;
 }
 
 * {

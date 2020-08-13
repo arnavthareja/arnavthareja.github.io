@@ -37,8 +37,8 @@
   /* dark mode: 0 0 5px white */
   --fly-in-duration: 0.6s;
   --fly-in-timing-function: cubic-bezier(0.27, 0.57, 0.54, 1.02);
-  --width-percent: 1;
-  --height-percent: 1; }
+  --width-ratio: 1;
+  --height-ratio: 1; }
 
 * {
   box-sizing: border-box;
@@ -66,22 +66,22 @@ body {
     scrollbar-track-color: #cfcfcf; }
 
 .title-small {
-  font-size: calc(1.8rem * var(--width-percent)); }
+  font-size: calc(1.8rem * var(--width-ratio)); }
 
 .title-medium {
-  font-size: calc(3rem * var(--width-percent)); }
+  font-size: calc(3rem * var(--width-ratio)); }
 
 .title-large {
-  font-size: calc(4rem * var(--width-percent)); }
+  font-size: calc(4rem * var(--width-ratio)); }
 
 .text-small {
-  font-size: calc(1.1rem * var(--width-percent)); }
+  font-size: calc(1.1rem * var(--width-ratio)); }
 
 .text-medium {
-  font-size: calc(1.4rem * var(--width-percent)); }
+  font-size: calc(1.4rem * var(--width-ratio)); }
 
 .text-large {
-  font-size: calc(1.7rem * var(--width-percent)); }
+  font-size: calc(1.7rem * var(--width-ratio)); }
 
 .profile {
   width: 100%;

@@ -66,9 +66,9 @@ window.onresize = function() {
     var newWidth = window.innerWidth;
     var newHeight = window.innerHeight;
 
-    var widthPercent = Math.sqrt(newWidth / startWidth);
-    var heightPercent = Math.sqrt(newHeight / startHeight);
+    var widthRatio = Math.sqrt(newWidth / startWidth);
+    var heightRatio = Math.sqrt(newHeight / startHeight);
 
-    root.style.setProperty('--width-percent', widthPercent);
-    root.style.setProperty('--height-percent', heightPercent);
+    root.style.setProperty('--width-ratio', widthRatio);
+    root.style.setProperty('--height-ratio', heightRatio);
 }
