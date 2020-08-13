@@ -75,13 +75,13 @@ body {
   font-size: calc(4rem * var(--width-percent)); }
 
 .text-small {
-  font-size: calc(0.8rem * var(--width-percent)); }
+  font-size: calc(1.1rem * var(--width-percent)); }
 
 .text-medium {
-  font-size: calc(1rem * var(--width-percent)); }
+  font-size: calc(1.4rem * var(--width-percent)); }
 
 .text-large {
-  font-size: calc(1.2rem * var(--width-percent)); }
+  font-size: calc(1.7rem * var(--width-percent)); }
 
 .profile {
   width: 100%;

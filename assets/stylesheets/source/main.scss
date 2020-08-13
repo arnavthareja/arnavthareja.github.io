@@ -90,15 +90,15 @@ body {
 }
 
 .text-small {
-    @include font-size(0.8rem);
+    @include font-size(1.1rem);
 }
 
 .text-medium {
-    @include font-size(1rem);
+    @include font-size(1.4rem);
 }
 
 .text-large {
-    @include font-size(1.2rem);
+    @include font-size(1.7rem);
 }
 
 .profile {
