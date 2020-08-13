@@ -76,7 +76,7 @@ body {
     align-items: center;
     align-content: stretch;
     overflow: hidden;
-    background: transparent;
+    background: var(--main-background-gradient);
     color: var(--main-text-color);
 }
 

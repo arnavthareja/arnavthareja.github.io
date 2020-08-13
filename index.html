@@ -30,6 +30,13 @@
                 </a>
             </div>
         </div>
+        <!-- Canvas for trianglify background, profile background must be set to transparent in css -->
+        <!-- Set position: fixed for parallax effect, position: absolute for no parallax -->
+        <!-- This div is here so the background keeps the same gradient when initially loaded instead of displayed white before the triangle background is loaded -->
+        <!--
+        <div id="canvasBackground" style="width: 100vw; height: 100vh; z-index: -2; position: absolute; top: 0; left: 0; background: linear-gradient(150deg, #003262, teal);"></div>
+        <canvas id="canvas" style="width: 100vw; height: 100vh; z-index: -1; position: fixed; top: 0; left: 0;"></canvas>
+        -->
         <div class='portfolio-container' id='portfolio'>
             <div class='portfolio-menu flex-vertical'>
                 <!-- TODO: Change to links to scroll down to specified sections and highlight link when scrolled to that section -->
@@ -99,5 +106,19 @@
         <script>
             AOS.init();
         </script>
+
+        <!-- Sample code using trianglify.js for triangle background on profile -->
+        <!--
+        <script src='https://unpkg.com/trianglify@^4/dist/trianglify.bundle.js'></script>
+        <script>
+        const pattern = trianglify({
+            width: window.innerWidth,
+            height: window.innerHeight,
+            seed: "seed",
+            xColors: ["#003262", "teal"]
+        });
+        document.body.appendChild(pattern.toCanvas(document.querySelector("#canvas")));
+        </script>
+        -->
     </body>
 </html>
