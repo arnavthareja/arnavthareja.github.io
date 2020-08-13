@@ -4,8 +4,12 @@
         <title>Arnav Thareja</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset='UTF-8'>
         
         <link rel='stylesheet' type="text/css" href='assets/stylesheets/build/main.css'>
+
+        <!-- Roboto font -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
         <!-- Import AOS Library for card transitions -->
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -13,10 +17,10 @@
     <body>
         <div class='profile'>
             <div class='profile-picture-container'>
-                <img src='assets/images/arnav-pic.jpg' class='profile-picture disable-select disable-drag' alt='Profile Picture' oncontextmenu="return false">
+                <img src='assets/images/arnav-pic.jpg' class='profile-picture disable-select disable-drag center' alt='Profile Picture' oncontextmenu="return false">
             </div>
             <div class='profile-description'>
-                <h1>Arnav Thareja</h1>
+                <h1 class='title-large'>Arnav Thareja</h1>
                 <p>Hi! I am a freshman at the University of Washington studying Computer Science in the Paul G. Allen School of Computer Science & Engineering.</p>
                 <div class="icons">
                     <a target="_blank" href="https://www.linkedin.com/in/arnavthareja/"><div class='icon center'><i class="fa fa-linkedin-square fa-2x"></i></div></a>
@@ -40,20 +44,20 @@
         <div class='portfolio-container' id='portfolio'>
             <div class='portfolio-menu flex-vertical'>
                 <!-- TODO: Change to links to scroll down to specified sections and highlight link when scrolled to that section -->
-                <button type="button" id='Experience' class='menu' onclick='select("Experience")'><a href='#experience'><h2>Experience</h2></a></button>
-                <button type="button" id='Projects' class='menu selected' onclick='select("Projects")'><a href='#projects'><h2>Projects</h2></a></button>
-                <button type="button" id='Coursework' class='menu' onclick='select("Coursework")'><a href='#coursework'><h2>Coursework</h2></a></button>
-                <button type="button" id='Resume' class='menu' onclick='select("Resume")'><a href='#resume'><h2>Resume</h2></a></button>
+                <button type="button" id='Experience' class='menu' onclick='select("Experience")'><a href='#experience'><h2 class='title-small'>Experience</h2></a></button>
+                <button type="button" id='Projects' class='menu selected' onclick='select("Projects")'><a href='#projects'><h2 class='title-small'>Projects</h2></a></button>
+                <button type="button" id='Coursework' class='menu' onclick='select("Coursework")'><a href='#coursework'><h2 class='title-small'>Coursework</h2></a></button>
+                <button type="button" id='Resume' class='menu' onclick='select("Resume")'><a href='#resume'><h2 class='title-small'>Resume</h2></a></button>
             </div>
 
             <div class='title-container'>
-                <h2 id='portfolio-title'>Projects</h2>
+                <h2 class='title-medium' id='portfolio-title'>Projects</h2>
             </div>
 
             <div class='portfolio'>
                 <div class='section-container grid-3' id='projects'>
-                    <div class='project-card' data-aos='flip-left'>
-                        <div class='project-image-container'>
+                    <div class='project-card' data-aos='fade-up'>
+                        <div class='project-image-container center'>
                             <img src='assets/images/yearbook-2020-logo.png' class='project-image'>
                         </div>
                         <div class='project-title'>
@@ -63,7 +67,7 @@
                             <p>An online app designed to keep students connected during COVID-19 quarantines. Each student gets a virtual yearbook page that others can sign, and they can sign others' yearbook pages.<br><br>Try it at <a target="_blank" href="https://yearbook-hhs.web.app">https://yearbook-hhs.web.app</a> and see the source code <a target="_blank" href="https://www.github.com/evilpegasus/Yearbook">here</a>.</p>
                         </div>
                     </div>
-                    <div class='project-card' data-aos='flip-left' data-aos-delay='100'>
+                    <div class='project-card' data-aos='fade-up' data-aos-delay='100'>
                         <div class='project-image-container center'>
                             <img src='assets/images/table-tennis-logo.PNG' class='project-image'>
                         </div>
@@ -74,21 +78,36 @@
                             <p>A Java app to enable a quick and paperless sign-in process for Hazen High School's Table Tennis Club. Uses the Google Sheets API to upload sign-in records to the club's Google Sheet for membership tracking and analytics.</p>
                         </div>
                     </div>
-                    <!--
-                    <div class='project-card' data-aos='flip-left' data-aos-delay='200'>
-                        <div class='project-image-container'>
-                            <img src='assets/table-tennis-logo.PNG' class='project-image'>
+                    <div class='project-card' data-aos='fade-up' data-aos-delay='200'>
+                        <div class='project-image-container center'>
+                            <img src='assets/images/table-tennis-logo.PNG' class='project-image'>
                         </div>
                         <div class='project-title'>
                             <p>Music Analysis</p>
                         </div>
                         <div class='project-description'>
-                            <p>Analyzed samples of popular music in Python and trained a classification model using Tensorflow to predict success of a provided music sample.</p>
+                            <p>An analysis of samples of popular music in Python. Looked for key features of popular songs and what differentiates them from unpopular music. Trained a classification model using Tensorflow to predict success of a provided music sample.</p>
+                        </div>
+                    </div>
+                    <!--
+                    <div class='project-card' data-aos='fade-up' data-aos-delay='200'>
+                        <div class='project-image-container center'>
+                            <img src='assets/images/table-tennis-logo.PNG' class='project-image'>
+                            Put an iframe here that reflects this website's current scroll state
+                        </div>
+                        <div class='project-title'>
+                            <p>Personal Website</p>
+                        </div>
+                        <div class='project-description'>
+                            <p>This website.</p>
                         </div>
                     </div>
                     -->
                 </div>
             </div>
+        </div>
+
+        <div class='contact' style='height: 100vh; width: 100%; background-color: #004561;'>
         </div>
 
         <footer>

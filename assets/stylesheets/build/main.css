@@ -36,10 +36,16 @@
   --box-shadow: 0 5px 15px black;
   /* dark mode: 0 0 5px white */
   --fly-in-duration: 0.6s;
-  --fly-in-timing-function: cubic-bezier(0.27, 0.57, 0.54, 1.02); }
+  --fly-in-timing-function: cubic-bezier(0.27, 0.57, 0.54, 1.02);
+  --width-percent: 1;
+  --height-percent: 1; }
 
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: Roboto, Helvetica, Verdana, Tahoma, sans-serif; }
+
+html {
+  font-size: 100%; }
 
 html, body {
   padding: 0;
@@ -47,7 +53,6 @@ html, body {
   scroll-behavior: smooth; }
 
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   overflow-x: hidden; }
   body::-webkit-scrollbar {
     width: 0.8%;
@@ -59,6 +64,24 @@ body {
   body {
     scrollbar-face-color: #9e9ebe;
     scrollbar-track-color: #cfcfcf; }
+
+.title-small {
+  font-size: calc(1.8rem * var(--width-percent)); }
+
+.title-medium {
+  font-size: calc(3rem * var(--width-percent)); }
+
+.title-large {
+  font-size: calc(4rem * var(--width-percent)); }
+
+.text-small {
+  font-size: calc(0.8rem * var(--width-percent)); }
+
+.text-medium {
+  font-size: calc(1rem * var(--width-percent)); }
+
+.text-large {
+  font-size: calc(1.2rem * var(--width-percent)); }
 
 .profile {
   width: 100%;
@@ -184,7 +207,6 @@ button.menu a, button.menu a h2, #portfolio-title {
   align-items: center; }
 
 #portfolio-title {
-  font-size: 44px;
   margin: 6vh 3vw;
   text-align: left;
   justify-self: flex-start;
@@ -214,7 +236,6 @@ button.menu {
     button.menu a h2 {
       display: inline-block;
       text-align: left;
-      font-size: 24px;
       padding: 3% 10%;
       margin: 0;
       box-sizing: border-box;

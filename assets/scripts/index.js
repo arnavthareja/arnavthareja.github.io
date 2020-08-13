@@ -1,5 +1,13 @@
 var selected = 'Projects';
 var darkModeActive = false;
+const root = document.documentElement;
+var startWidth
+var startHeight
+
+window.onload = function() {
+    startWidth = window.innerWidth;
+    startHeight = window.innerHeight;
+}
 
 function select(id) {
     
@@ -19,8 +27,6 @@ function select(id) {
 function toggleDarkMode() {
 
     // TODO: Also change portfolio menu buttons highlighted and selected
-
-    const root = document.documentElement;
 
     if (darkModeActive) {
         // Change to light mode
@@ -51,4 +57,18 @@ function toggleDarkMode() {
         
         return console.log("Switched to dark mode");
     }
+}
+
+window.onresize = function() {
+
+    // TODO: Set a minimum value to prevent text from becoming too small
+
+    var newWidth = window.innerWidth;
+    var newHeight = window.innerHeight;
+
+    var widthPercent = newWidth / startWidth;
+    var heightPercent = newHeight / startHeight;
+
+    root.style.setProperty('--width-percent', widthPercent);
+    root.style.setProperty('--height-percent', heightPercent);
 }
