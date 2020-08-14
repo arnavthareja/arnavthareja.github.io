@@ -41,7 +41,7 @@
         <div id="canvasBackground" style="width: 100vw; height: 100vh; z-index: -2; position: absolute; top: 0; left: 0; background: linear-gradient(150deg, #003262, teal);"></div>
         <canvas id="canvas" style="width: 100vw; height: 100vh; z-index: -1; position: fixed; top: 0; left: 0;"></canvas>
         -->
-        <div class='portfolio-container' id='portfolio'>
+        <div class='portfolio-container flex-horizontal' id='portfolio'>
             <div class='portfolio-menu flex-vertical'>
                 <!-- TODO: Change to links to scroll down to specified sections and highlight link when scrolled to that section -->
                 <button type="button" id='Experience' class='menu' onclick='select("Experience")'><a href='#experience'><h2 class='title-small small-caps'>Experience</h2></a></button>
@@ -51,52 +51,68 @@
             </div>
 
             <div class='portfolio'>
-                <div class='title-container'>
+                <div class='title-container' id='experience'>
                     <h2 class='title-medium portfolio-title'>Experience</h2>
                 </div>
-                <div class='section-container flex-vertical' id='experience'>
+                <div class='section-container flex-vertical'>
                     <div class='experience card flex-horizontal' data-aos='fade'>
                         <div class='experience image-container center'>
                             <img src='assets/images/table-tennis-logo.png' class='experience image'>
                         </div>
-                        <div class='experience title flex-vertical'>
-                            <p class='title-small'>Math Instructor</p>
-                            <p class='title-xs'>Mathnasium</p>
-                        </div>
-                        <div class='experience description'>
-                            <p class='text-small'>Helped students in grades K-12 learn math and become excited about it. Taught subjects ranging from basic addition and subtraction to calculus.</p>
+                        <div class='experience content flex-vertical'>
+                            <div class='experience title flex-vertical'>
+                                <p class='title-small'>Math Instructor</p>
+                                <p class='title-xs'>Mathnasium (May 2019 - June 2020)</p>
+                            </div>
+                            <div class='experience description'>
+                                <ul>
+                                    <li class='text-small'>Helped students in grades K-12 learn math and develop an intuitive understanding of it</li>
+                                    <li class='text-small'>Taught subjects ranging from basic addition and subtraction to calculus</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div class='experience card flex-horizontal' data-aos='fade'>
                         <div class='experience image-container center'>
                             <img src='assets/images/table-tennis-logo.png' class='experience image'>
                         </div>
-                        <div class='experience title flex-vertical'>
-                            <p class='title-small'>Project Manager</p>
-                            <p class='title-xs'>First Tech Challenge Team 8693:<br>The Scarabs</p>
-                        </div>
-                        <div class='experience description'>
-                            <p class='text-small'>Led Hazen High School's FTC Robotics Team 8693: The Scarabs. Led over 20 members to successful completion of a competition robot. Oversaw and was heavily involved in technical creation of the robot and accompanying software and responsible for creating appropriate deadlines and ensuring the team met them successfully.</p>
+                        <div class='experience content flex-vertical'>
+                            <div class='experience title flex-vertical'>
+                                <p class='title-small'>Project Manager</p>
+                                <p class='title-xs'>First Tech Challenge Team 8693: The Scarabs (August 2016 - Jun 2020)</p>
+                            </div>
+                            <div class='experience description'>
+                                <ul>
+                                    <li class='text-small'>Led over 20 members to successful completion of a competition robot</li>
+                                    <li class='text-small'>Oversaw and was heavily involved in technical creation of the robot and accompanying software</li>
+                                    <li class='text-small'>Responsible for creating appropriate deadlines and ensuring the team met them successfully</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div class='experience card flex-horizontal' data-aos='fade'>
                         <div class='experience image-container center'>
                             <img src='assets/images/yearbook-2020-logo.png' class='experience image'>
                         </div>
-                        <div class='experience title flex-vertical'>
-                            <p class='title-small'>Junior Docent</p>
-                            <p class='title-xs'>Museum of Flight</p>
-                        </div>
-                        <div class='experience description'>
-                            <p class='text-small'>Gave presentations about aviation history to Museum of Flight visitors.</p>
+                        <div class='experience content flex-vertical'>
+                            <div class='experience title flex-vertical'>
+                                <p class='title-small'>Junior Docent</p>
+                                <p class='title-xs'>Museum of Flight</p>
+                            </div>
+                            <div class='experience description'>
+                                <ul>
+                                    <li class='text-small'>Gave presentations about aviation history to Museum of Flight visitors</li>
+                                    <li class='text-small'>Made interactive exhibits designed to teach young kids about topics in aviation</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class='title-container'>
+                <div class='title-container' id='projects'>
                     <h2 class='title-medium portfolio-title'>Projects</h2>
                 </div>
-                <div class='section-container grid-3' id='projects'>
+                <div class='section-container grid-3'>
                     <div class='project card flex-vertical' data-aos='fade'>
                         <div class='project image-container center'>
                             <img src='assets/images/yearbook-2020-logo.png' class='project image'>
