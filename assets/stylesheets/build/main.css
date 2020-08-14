@@ -63,7 +63,7 @@ body {
     background: #9e9ebe; }
     body::-webkit-scrollbar-thumb:hover {
       background: #7f7fa9; }
-    body::-webkit-scrollbar-thumb:focus {
+    body::-webkit-scrollbar-thumb:active {
       background: #626292; }
   body::-webkit-scrollbar-track {
     background: #cfcfcf; }
@@ -232,7 +232,7 @@ button.menu {
     /* alt text color with alpha of 0.1 */ }
   button.menu:focus {
     outline: none; }
-  button.menu.selected {
+  button.menu.selected, button.menu:active {
     background: rgba(var(--alt-text-color-rgb), 0.2);
     /* alt text color with alpha of 0.2 */ }
   button.menu a {

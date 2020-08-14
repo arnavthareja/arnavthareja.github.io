@@ -12,7 +12,7 @@
             background: scale-color($foreground-color, $lightness: -15%);
         }
 
-        &:focus {
+        &:active {
             background: scale-color($foreground-color, $lightness: -30%);
         }
     }
@@ -278,7 +278,7 @@ button.menu {
         outline: none;
     }
 
-    &.selected {
+    &.selected, &:active {
         background: rgba(var(--alt-text-color-rgb), 0.2); /* alt text color with alpha of 0.2 */
     }
 
