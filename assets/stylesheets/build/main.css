@@ -71,6 +71,9 @@ body {
     scrollbar-face-color: #9e9ebe;
     scrollbar-track-color: #cfcfcf; }
 
+.title-xs {
+  font-size: calc(1.3rem * var(--width-ratio)); }
+
 .title-small {
   font-size: calc(1.8rem * var(--width-ratio)); }
 
@@ -88,6 +91,9 @@ body {
 
 .text-large {
   font-size: calc(1.7rem * var(--width-ratio)); }
+
+.small-caps {
+  font-variant: small-caps; }
 
 .profile {
   width: 100%;
@@ -200,7 +206,7 @@ body {
   align-content: center;
   background: var(--alt-background-color); }
 
-button.menu a, button.menu a h2, #portfolio-title {
+button.menu a, button.menu a h2, .portfolio-title {
   color: var(--alt-text-color);
   display: inline;
   text-decoration: none; }
@@ -212,7 +218,7 @@ button.menu a, button.menu a h2, #portfolio-title {
   flex-flow: row nowrap;
   align-items: center; }
 
-#portfolio-title {
+.portfolio-title {
   margin: 6vh 3vw;
   text-align: left;
   justify-self: flex-start;
@@ -245,7 +251,6 @@ button.menu {
       padding: 3% 10%;
       margin: 0;
       box-sizing: border-box;
-      font-variant: small-caps;
       width: 100%;
       height: 100%; }
 
@@ -268,49 +273,73 @@ button.menu {
   justify-content: flex-start;
   align-items: stretch; }
 
+.flex-horizontal {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center; }
+
 .center {
   display: flex;
   align-items: center;
   justify-content: center; }
 
-.project-card {
+.card {
   width: 100%;
-  height: 100%;
   border-radius: 20px;
   background: var(--main-background-color);
   color: var(--main-text-color);
   margin: 1%;
-  padding: 4%;
-  box-sizing: border-box;
   box-shadow: var(--box-shadow); }
-  .project-card a {
+  .card a {
     color: inherit; }
 
-.project-image-container {
+.project.card {
+  height: 100%;
+  padding: 4%; }
+
+.experience.card {
+  height: 100%;
+  padding: 1% 2%; }
+
+.experience.image-container {
+  width: auto;
+  height: 12vh;
+  margin: 1% 0;
+  flex: 15%; }
+
+.project.image-container {
   width: auto;
   height: 20vh;
   margin: 1% 0; }
 
-.project-image {
+.image {
   max-height: 99%;
   max-width: 99%;
   border-radius: 5px;
   border: 2px solid white; }
 
-.project-title {
+.title {
   width: 100%;
   height: auto;
-  padding: 1%;
-  box-sizing: border-box;
-  font-size: 30px; }
-  .project-title p {
-    margin: 5% 0; }
+  padding: 1%; }
 
-.project-description {
-  font-size: 17px;
+.experience.title {
+  width: auto;
+  flex: 35%; }
+
+.project.title p {
+  margin: 5% 0; }
+
+.experience.title p {
+  margin: 0.2em 2%; }
+
+.description {
   padding: 1%;
-  box-sizing: border-box;
   text-align: left; }
+
+.experience.description {
+  flex: 50%; }
 
 .disable-select {
   -webkit-touch-callout: none;

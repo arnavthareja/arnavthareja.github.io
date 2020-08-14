@@ -16,16 +16,16 @@
     </head>
     <body>
         <div class='profile'>
-            <div class='profile-picture-container'>
-                <img src='assets/images/arnav-pic.jpg' class='profile-picture disable-select disable-drag center' alt='Profile Picture' oncontextmenu="return false">
+            <div class='profile-picture-container center'>
+                <img src='assets/images/arnav-pic.jpg' class='profile-picture disable-select disable-drag' alt='Profile Picture' oncontextmenu="return false">
             </div>
             <div class='profile-description'>
                 <h1 class='title-large'>Arnav Thareja</h1>
                 <p class='text-medium'>Hi! I am a freshman at the University of Washington studying Computer Science in the Paul G. Allen School of Computer Science & Engineering.</p>
                 <div class="icons">
-                    <a target="_blank" href="https://www.linkedin.com/in/arnavthareja/"><div class='icon center'><i class="fa fa-linkedin-square fa-2x"></i></div></a>
-                    <a target="_blank" href="https://github.com/arnavthareja/"><div class='icon center'><i class="fa fa-github fa-2x"></i></div></a>
-                    <a target="_blank" href="mailto:arnav.thareja25@gmail.com"><div class='icon center'><i class="fa fa-envelope fa-2x"></i></div></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/arnavthareja/" class='center'><div class='icon center'><i class="fa fa-linkedin-square fa-2x"></i></div></a>
+                    <a target="_blank" href="https://github.com/arnavthareja/" class='center'><div class='icon center'><i class="fa fa-github fa-2x"></i></div></a>
+                    <a target="_blank" href="mailto:arnav.thareja25@gmail.com" class='center'><div class='icon center'><i class="fa fa-envelope fa-2x"></i></div></a>
                 </div>
             </div>
             <div class='down-arrow center'>
@@ -44,61 +44,102 @@
         <div class='portfolio-container' id='portfolio'>
             <div class='portfolio-menu flex-vertical'>
                 <!-- TODO: Change to links to scroll down to specified sections and highlight link when scrolled to that section -->
-                <button type="button" id='Experience' class='menu' onclick='select("Experience")'><a href='#experience'><h2 class='title-small'>Experience</h2></a></button>
-                <button type="button" id='Projects' class='menu selected' onclick='select("Projects")'><a href='#projects'><h2 class='title-small'>Projects</h2></a></button>
-                <button type="button" id='Coursework' class='menu' onclick='select("Coursework")'><a href='#coursework'><h2 class='title-small'>Coursework</h2></a></button>
-                <button type="button" id='Resume' class='menu' onclick='select("Resume")'><a href='#resume'><h2 class='title-small'>Resume</h2></a></button>
-            </div>
-
-            <div class='title-container'>
-                <h2 class='title-medium' id='portfolio-title'>Projects</h2>
+                <button type="button" id='Experience' class='menu' onclick='select("Experience")'><a href='#experience'><h2 class='title-small small-caps'>Experience</h2></a></button>
+                <button type="button" id='Projects' class='menu selected' onclick='select("Projects")'><a href='#projects'><h2 class='title-small small-caps'>Projects</h2></a></button>
+                <button type="button" id='Coursework' class='menu' onclick='select("Coursework")'><a href='#coursework'><h2 class='title-small small-caps'>Coursework</h2></a></button>
+                <button type="button" id='Resume' class='menu' onclick='select("Resume")'><a href='#resume'><h2 class='title-small small-caps'>Resume</h2></a></button>
             </div>
 
             <div class='portfolio'>
-                <div class='section-container grid-3' id='projects'>
-                    <div class='project-card' data-aos='fade'>
-                        <div class='project-image-container center'>
-                            <img src='assets/images/yearbook-2020-logo.png' class='project-image'>
+                <div class='title-container'>
+                    <h2 class='title-medium portfolio-title'>Experience</h2>
+                </div>
+                <div class='section-container flex-vertical' id='experience'>
+                    <div class='experience card flex-horizontal' data-aos='fade'>
+                        <div class='experience image-container center'>
+                            <img src='assets/images/table-tennis-logo.png' class='experience image'>
                         </div>
-                        <div class='project-title'>
+                        <div class='experience title flex-vertical'>
+                            <p class='title-small'>Math Instructor</p>
+                            <p class='title-xs'>Mathnasium</p>
+                        </div>
+                        <div class='experience description'>
+                            <p class='text-small'>Helped students in grades K-12 learn math and become excited about it. Taught subjects ranging from basic addition and subtraction to calculus.</p>
+                        </div>
+                    </div>
+                    <div class='experience card flex-horizontal' data-aos='fade'>
+                        <div class='experience image-container center'>
+                            <img src='assets/images/table-tennis-logo.png' class='experience image'>
+                        </div>
+                        <div class='experience title flex-vertical'>
+                            <p class='title-small'>Project Manager</p>
+                            <p class='title-xs'>First Tech Challenge Team 8693:<br>The Scarabs</p>
+                        </div>
+                        <div class='experience description'>
+                            <p class='text-small'>Led Hazen High School's FTC Robotics Team 8693: The Scarabs. Led over 20 members to successful completion of a competition robot. Oversaw and was heavily involved in technical creation of the robot and accompanying software and responsible for creating appropriate deadlines and ensuring the team met them successfully.</p>
+                        </div>
+                    </div>
+                    <div class='experience card flex-horizontal' data-aos='fade'>
+                        <div class='experience image-container center'>
+                            <img src='assets/images/yearbook-2020-logo.png' class='experience image'>
+                        </div>
+                        <div class='experience title flex-vertical'>
+                            <p class='title-small'>Junior Docent</p>
+                            <p class='title-xs'>Museum of Flight</p>
+                        </div>
+                        <div class='experience description'>
+                            <p class='text-small'>Gave presentations about aviation history to Museum of Flight visitors.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='title-container'>
+                    <h2 class='title-medium portfolio-title'>Projects</h2>
+                </div>
+                <div class='section-container grid-3' id='projects'>
+                    <div class='project card flex-vertical' data-aos='fade'>
+                        <div class='project image-container center'>
+                            <img src='assets/images/yearbook-2020-logo.png' class='project image'>
+                        </div>
+                        <div class='project title'>
                             <p class='title-small'>Yearbook 2020</p>
                         </div>
-                        <div class='project-description'>
+                        <div class='project description'>
                             <p class='text-small'>An online app designed to keep students connected during COVID-19 quarantines. Each student gets a virtual yearbook page that others can sign, and they can sign others' yearbook pages.<br><br>Try it at <a target="_blank" href="https://yearbook-hhs.web.app">https://yearbook-hhs.web.app</a> and see the source code <a target="_blank" href="https://www.github.com/evilpegasus/Yearbook">here</a>.</p>
                         </div>
                     </div>
-                    <div class='project-card' data-aos='fade' data-aos-delay='50'>
-                        <div class='project-image-container center'>
-                            <img src='assets/images/table-tennis-logo.PNG' class='project-image'>
+                    <div class='project card flex-vertical' data-aos='fade' data-aos-delay='50'>
+                        <div class='project image-container center'>
+                            <img src='assets/images/table-tennis-logo.PNG' class='project image'>
                         </div>
-                        <div class='project-title'>
+                        <div class='project title'>
                             <p class='title-small'>Table Tennis Sign-In</p>
                         </div>
-                        <div class='project-description'>
+                        <div class='project description'>
                             <p class='text-small'>A Java app to enable a quick and paperless sign-in process for Hazen High School's Table Tennis Club. Uses the Google Sheets API to upload sign-in records to the club's Google Sheet for membership tracking and analytics.</p>
                         </div>
                     </div>
-                    <div class='project-card' data-aos='fade' data-aos-delay='100'>
-                        <div class='project-image-container center'>
-                            <img src='assets/images/table-tennis-logo.PNG' class='project-image'>
+                    <div class='project card flex-vertical' data-aos='fade' data-aos-delay='100'>
+                        <div class='project image-container center'>
+                            <img src='assets/images/table-tennis-logo.PNG' class='project image'>
                         </div>
-                        <div class='project-title'>
+                        <div class='project title'>
                             <p class='title-small'>Music Analysis</p>
                         </div>
-                        <div class='project-description'>
+                        <div class='project description'>
                             <p class='text-small'>An analysis of samples of popular music in Python. Looked for key features of popular songs and what differentiates them from unpopular music. Trained a classification model using Tensorflow to predict success of a provided music sample.</p>
                         </div>
                     </div>
                     <!--
-                    <div class='project-card' data-aos='fade-up' data-aos-delay='200'>
-                        <div class='project-image-container center'>
-                            <img src='assets/images/table-tennis-logo.PNG' class='project-image'>
+                    <div class='project card flex-vertical' data-aos='fade'>
+                        <div class='project image-container center'>
+                            <img src='assets/images/table-tennis-logo.PNG' class='project image'>
                             Put an iframe here that reflects this website's current scroll state
                         </div>
-                        <div class='project-title'>
+                        <div class='project title'>
                             <p>Personal Website</p>
                         </div>
-                        <div class='project-description'>
+                        <div class='project description'>
                             <p>This website.</p>
                         </div>
                     </div>
@@ -108,7 +149,7 @@
         </div>
 
         <footer>
-            <p>&copy; 2020 Arnav Thareja</p>
+            <p class='text-small'>&copy; 2020 Arnav Thareja</p>
         </footer>
 
         <!-- Link scripts -->

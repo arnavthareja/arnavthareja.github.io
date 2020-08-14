@@ -26,8 +26,6 @@ function select(id) {
 
 function toggleDarkMode() {
 
-    // TODO: Also change portfolio menu buttons highlighted and selected
-
     if (darkModeActive) {
         // Change to light mode
         root.style.setProperty('--main-background-color', '#003262');
