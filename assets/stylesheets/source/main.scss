@@ -7,6 +7,14 @@
   
     &::-webkit-scrollbar-thumb {
         background: $foreground-color;
+
+        &:hover {
+            background: scale-color($foreground-color, $lightness: -15%);
+        }
+
+        &:focus {
+            background: scale-color($foreground-color, $lightness: -30%);
+        }
     }
   
     &::-webkit-scrollbar-track {
@@ -50,6 +58,7 @@
     --main-background-gradient: linear-gradient(30deg, #003262, #004893); /* dark mode: black */
     --alt-background-color: #d7cb84; /* dark mode: black */
     --alt-text-color: #003262; /* dark mode: white */
+    --alt-text-color-rgb: 0, 50, 98; /* dark mode: 255, 255, 255 */
     --box-shadow: 0 5px 15px black; /* dark mode: 0 0 5px white */
     --fly-in-duration: 0.6s;
     --fly-in-timing-function: cubic-bezier(0.27, 0.57, 0.54, 1.02);
@@ -262,7 +271,7 @@ button.menu {
 
     &:hover {
         cursor: pointer;
-        background: rgba(0, 51, 98, 0.1); /* alt text color with alpha of 0.1 */
+        background: rgba(var(--alt-text-color-rgb), 0.1); /* alt text color with alpha of 0.1 */
     }
 
     &:focus {
@@ -270,7 +279,7 @@ button.menu {
     }
 
     &.selected {
-        background: rgba(0, 51, 98, 0.2); /* alt text color with alpha of 0.2 */
+        background: rgba(var(--alt-text-color-rgb), 0.2); /* alt text color with alpha of 0.2 */
     }
 
     a {
