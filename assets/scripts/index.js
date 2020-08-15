@@ -29,7 +29,9 @@ function toggleDarkMode() {
     if (darkModeActive) {
         // Change to light mode
         root.style.setProperty('--main-background-color', '#003262');
+        root.style.setProperty('--main-background-color-dark', '#001631');
         root.style.setProperty('--main-text-color', 'white');
+        root.style.setProperty('--main-text-color-rgb', '255, 255, 255');
         root.style.setProperty('--main-background-gradient', 'linear-gradient(30deg, #003262, #004893)');
         root.style.setProperty('--alt-background-color', '#d7cb84');
         root.style.setProperty('--alt-text-color', '#003262');
@@ -44,7 +46,9 @@ function toggleDarkMode() {
     } else {
         // Change to dark mode
         root.style.setProperty('--main-background-color', 'black');
+        root.style.setProperty('--main-background-color-dark', 'black');
         root.style.setProperty('--main-text-color', 'white');
+        root.style.setProperty('--main-text-color-rgb', '255, 255, 255');
         root.style.setProperty('--main-background-gradient', 'black');
         root.style.setProperty('--alt-background-color', 'black');
         root.style.setProperty('--alt-text-color', 'white');
