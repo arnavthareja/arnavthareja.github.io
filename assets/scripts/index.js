@@ -1,4 +1,6 @@
 // TODO: vey slow right now. fix it
+// Maybe implement updateCurrentSection lock while scrolling to section, currently when clicked it updates back to current then to desired, should update straight to desired
+// Might have to change HTML onclicks to event handlers here with a lock that is activate before scrolling and deactivated afterwards
 
 var selected = 'Experience';
 var darkModeActive = false;
