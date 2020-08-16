@@ -35,130 +35,141 @@
             </div>
         </div>
 
-        <div class='portfolio-menu flex-horizontal' data-aos='fade-down' data-aos-anchor='#experience' data-aos-anchor-placement='top-top' data-aos-offset='-60'>
+        <div class='portfolio-menu flex-vertical' data-aos='fade-down' data-aos-anchor='#experience' data-aos-anchor-placement='top-top' data-aos-offset='-60'>
             <!-- TODO: Change to links to scroll down to specified sections and highlight link when scrolled to that section -->
-            <button type="button" id='Experience' class='menu selected' onclick='select("Experience")'><a href='#experience'><h2 class='title-small small-caps'>Experience</h2></a></button>
-            <button type="button" id='Projects' class='menu' onclick='select("Projects")'><a href='#projects'><h2 class='title-small small-caps'>Projects</h2></a></button>
-            <button type="button" id='Coursework' class='menu' onclick='select("Coursework")'><a href='#coursework'><h2 class='title-small small-caps'>Coursework</h2></a></button>
-            <button type="button" id='Resume' class='menu' onclick='select("Resume")'><a href='#resume'><h2 class='title-small small-caps'>Resume</h2></a></button>
+            <div class='menu-buttons flex-horizontal'>
+                <button type="button" id='Experience' class='menu selected' onclick='select("Experience")'><a href='#experience'><h2 class='title-small small-caps'>Experience</h2></a></button>
+                <button type="button" id='Projects' class='menu' onclick='select("Projects")'><a href='#projects'><h2 class='title-small small-caps'>Projects</h2></a></button>
+                <button type="button" id='Coursework' class='menu' onclick='select("Coursework")'><a href='#coursework'><h2 class='title-small small-caps'>Coursework</h2></a></button>
+                <button type="button" id='Resume' class='menu' onclick='select("Resume")'><a href='#resume'><h2 class='title-small small-caps'>Resume</h2></a></button>
+            </div>
+            <!--
+            <div class='progress-container'>
+                <div class='progress-bar'></div>
+            </div>
+        -->
         </div>
 
         <div class='portfolio flex-vertical'>
-            <div class='title-container center' id='experience'>
-                <h2 class='title-medium portfolio-title'>Experience</h2>
-            </div>
-            <div class='section-container flex-vertical'>
-                <div class='experience card flex-horizontal' data-aos='fade'>
-                    <div class='experience image-container center'>
-                        <img src='assets/images/table-tennis-logo.png' class='experience image'>
-                    </div>
-                    <div class='experience content flex-vertical'>
-                        <div class='experience title flex-vertical'>
-                            <p class='title-small'>Math Instructor</p>
-                            <p class='title-xs'>Mathnasium (May 2019 - June 2020)</p>
-                        </div>
-                        <div class='experience description'>
-                            <ul>
-                                <li class='text-small'>Helped students in grades K-12 learn math and develop an intuitive understanding of it</li>
-                                <li class='text-small'>Taught subjects ranging from basic addition and subtraction to calculus</li>
-                            </ul>
-                        </div>
-                    </div>
+            <div id='experience'>
+                <div class='title-container center'>
+                    <h2 class='title-medium portfolio-title'>Experience</h2>
                 </div>
-                <div class='experience card flex-horizontal' data-aos='fade'>
-                    <div class='experience image-container center'>
-                        <img src='assets/images/table-tennis-logo.png' class='experience image'>
-                    </div>
-                    <div class='experience content flex-vertical'>
-                        <div class='experience title flex-vertical'>
-                            <p class='title-small'>Project Manager</p>
-                            <p class='title-xs'>First Tech Challenge Team 8693: The Scarabs (August 2016 - Jun 2020)</p>
+                <div class='section-container flex-vertical'>
+                    <div class='experience card flex-horizontal' data-aos='fade'>
+                        <div class='experience image-container center'>
+                            <img src='assets/images/table-tennis-logo.png' class='experience image'>
                         </div>
-                        <div class='experience description'>
-                            <ul>
-                                <li class='text-small'>Led over 20 members to successful completion of a competition robot</li>
-                                <li class='text-small'>Oversaw and was heavily involved in technical creation of the robot and accompanying software</li>
-                                <li class='text-small'>Responsible for creating appropriate deadlines and ensuring the team met them successfully</li>
-                            </ul>
+                        <div class='experience content flex-vertical'>
+                            <div class='experience title flex-vertical'>
+                                <p class='title-small'>Math Instructor</p>
+                                <p class='title-xs'>Mathnasium (May 2019 - June 2020)</p>
+                            </div>
+                            <div class='experience description'>
+                                <ul>
+                                    <li class='text-small'>Helped students in grades K-12 learn math and develop an intuitive understanding of it</li>
+                                    <li class='text-small'>Taught subjects ranging from basic addition and subtraction to calculus</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class='experience card flex-horizontal' data-aos='fade'>
-                    <div class='experience image-container center'>
-                        <img src='assets/images/yearbook-2020-logo.png' class='experience image'>
-                    </div>
-                    <div class='experience content flex-vertical'>
-                        <div class='experience title flex-vertical'>
-                            <p class='title-small'>Junior Docent</p>
-                            <p class='title-xs'>Museum of Flight</p>
+                    <div class='experience card flex-horizontal' data-aos='fade'>
+                        <div class='experience image-container center'>
+                            <img src='assets/images/table-tennis-logo.png' class='experience image'>
                         </div>
-                        <div class='experience description'>
-                            <ul>
-                                <li class='text-small'>Gave presentations about aviation history to Museum of Flight visitors</li>
-                                <li class='text-small'>Made interactive exhibits designed to teach young kids about topics in aviation</li>
-                            </ul>
+                        <div class='experience content flex-vertical'>
+                            <div class='experience title flex-vertical'>
+                                <p class='title-small'>Project Manager</p>
+                                <p class='title-xs'>First Tech Challenge Team 8693: The Scarabs (August 2016 - Jun 2020)</p>
+                            </div>
+                            <div class='experience description'>
+                                <ul>
+                                    <li class='text-small'>Led over 20 members to successful completion of a competition robot</li>
+                                    <li class='text-small'>Oversaw and was heavily involved in technical creation of the robot and accompanying software</li>
+                                    <li class='text-small'>Responsible for creating appropriate deadlines and ensuring the team met them successfully</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='experience card flex-horizontal' data-aos='fade'>
+                        <div class='experience image-container center'>
+                            <img src='assets/images/yearbook-2020-logo.png' class='experience image'>
+                        </div>
+                        <div class='experience content flex-vertical'>
+                            <div class='experience title flex-vertical'>
+                                <p class='title-small'>Junior Docent</p>
+                                <p class='title-xs'>Museum of Flight</p>
+                            </div>
+                            <div class='experience description'>
+                                <ul>
+                                    <li class='text-small'>Gave presentations about aviation history to Museum of Flight visitors</li>
+                                    <li class='text-small'>Made interactive exhibits designed to teach young kids about topics in aviation</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class='title-container center' id='projects'>
-                <h2 class='title-medium portfolio-title'>Projects</h2>
-            </div>
-            <div class='section-container grid-3'>
-                <div class='project card flex-vertical' data-aos='fade'>
-                    <div class='project image-container center'>
-                        <img src='assets/images/yearbook-2020-logo.png' class='project image'>
-                    </div>
-                    <div class='project title'>
-                        <p class='title-small'>Yearbook 2020</p>
-                    </div>
-                    <div class='project description'>
-                        <p class='text-small'>An online app designed to keep students connected during COVID-19 quarantines. Each student gets a virtual yearbook page that others can sign, and they can sign others' yearbook pages.<br><br>Try it at <a target="_blank" href="https://yearbook-hhs.web.app">https://yearbook-hhs.web.app</a> and see the source code <a target="_blank" href="https://www.github.com/evilpegasus/Yearbook">here</a>.</p>
-                    </div>
+            <div id='projects'>
+                <div class='title-container center'>
+                    <h2 class='title-medium portfolio-title'>Projects</h2>
                 </div>
-                <div class='project card flex-vertical' data-aos='fade' data-aos-delay='50'>
-                    <div class='project image-container center'>
-                        <img src='assets/images/table-tennis-logo.PNG' class='project image'>
+                <div class='section-container grid-3'>
+                    <div class='project card flex-vertical' data-aos='fade'>
+                        <div class='project image-container center'>
+                            <img src='assets/images/yearbook-2020-logo.png' class='project image'>
+                        </div>
+                        <div class='project title'>
+                            <p class='title-small'>Yearbook 2020</p>
+                        </div>
+                        <div class='project description'>
+                            <p class='text-small'>An online app designed to keep students connected during COVID-19 quarantines. Each student gets a virtual yearbook page that others can sign, and they can sign others' yearbook pages.<br><br>Try it at <a target="_blank" href="https://yearbook-hhs.web.app">https://yearbook-hhs.web.app</a> and see the source code <a target="_blank" href="https://www.github.com/evilpegasus/Yearbook">here</a>.</p>
+                        </div>
                     </div>
-                    <div class='project title'>
-                        <p class='title-small'>Table Tennis Sign-In</p>
+                    <div class='project card flex-vertical' data-aos='fade' data-aos-delay='50'>
+                        <div class='project image-container center'>
+                            <img src='assets/images/table-tennis-logo.PNG' class='project image'>
+                        </div>
+                        <div class='project title'>
+                            <p class='title-small'>Table Tennis Sign-In</p>
+                        </div>
+                        <div class='project description'>
+                            <p class='text-small'>A Java app to enable a quick and paperless sign-in process for Hazen High School's Table Tennis Club. Uses the Google Sheets API to upload sign-in records to the club's Google Sheet for membership tracking and analytics.</p>
+                        </div>
                     </div>
-                    <div class='project description'>
-                        <p class='text-small'>A Java app to enable a quick and paperless sign-in process for Hazen High School's Table Tennis Club. Uses the Google Sheets API to upload sign-in records to the club's Google Sheet for membership tracking and analytics.</p>
+                    <div class='project card flex-vertical' data-aos='fade' data-aos-delay='100'>
+                        <div class='project image-container center'>
+                            <img src='assets/images/table-tennis-logo.PNG' class='project image'>
+                        </div>
+                        <div class='project title'>
+                            <p class='title-small'>Music Analysis</p>
+                        </div>
+                        <div class='project description'>
+                            <p class='text-small'>An analysis of samples of popular music in Python. Looked for key features of popular songs and what differentiates them from unpopular music. Trained a classification model using Tensorflow to predict success of a provided music sample.</p>
+                        </div>
                     </div>
-                </div>
-                <div class='project card flex-vertical' data-aos='fade' data-aos-delay='100'>
-                    <div class='project image-container center'>
-                        <img src='assets/images/table-tennis-logo.PNG' class='project image'>
+                    <div class='project card flex-vertical' data-aos='fade'>
+                        <div class='project image-container center'>
+                            <img src='assets/images/table-tennis-logo.PNG' class='project image'>
+                        </div>
+                        <div class='project title'>
+                            <p class='title-small'>Personal Website</p>
+                        </div>
+                        <div class='project description'>
+                            <p class='text-small'>This website. Written in HTML, SCSS, and JavaScript.<br><br>See the source code <a target='_blank' href='https://github.com/arnavthareja/arnavthareja.github.io'>here</a>.</p>
+                        </div>
                     </div>
-                    <div class='project title'>
-                        <p class='title-small'>Music Analysis</p>
-                    </div>
-                    <div class='project description'>
-                        <p class='text-small'>An analysis of samples of popular music in Python. Looked for key features of popular songs and what differentiates them from unpopular music. Trained a classification model using Tensorflow to predict success of a provided music sample.</p>
-                    </div>
-                </div>
-                <div class='project card flex-vertical' data-aos='fade'>
-                    <div class='project image-container center'>
-                        <img src='assets/images/table-tennis-logo.PNG' class='project image'>
-                    </div>
-                    <div class='project title'>
-                        <p class='title-small'>Personal Website</p>
-                    </div>
-                    <div class='project description'>
-                        <p class='text-small'>This website. Written in HTML, SCSS, and JavaScript.<br><br>See the source code <a target='_blank' href='https://github.com/arnavthareja/arnavthareja.github.io'>here</a>.</p>
-                    </div>
-                </div>
-                <div class='project card flex-vertical' data-aos='fade' data-aos-delay='50'>
-                    <div class='project image-container center'>
-                        <img src='assets/images/table-tennis-logo.PNG' class='project image'>
-                    </div>
-                    <div class='project title'>
-                        <p class='title-small'>More on GitHub!</p>
-                    </div>
-                    <div class='project description'>
-                        <p class='text-small'>See more of my projects on my GitHub!<br><br><a target='_blank' href='https://github.com/arnavthareja'>https://github.com/arnavthareja</a></p>
+                    <div class='project card flex-vertical' data-aos='fade' data-aos-delay='50'>
+                        <div class='project image-container center'>
+                            <img src='assets/images/table-tennis-logo.PNG' class='project image'>
+                        </div>
+                        <div class='project title'>
+                            <p class='title-small'>More on GitHub!</p>
+                        </div>
+                        <div class='project description'>
+                            <p class='text-small'>See more of my projects on my GitHub!<br><br><a target='_blank' href='https://github.com/arnavthareja'>https://github.com/arnavthareja</a></p>
+                        </div>
                     </div>
                 </div>
             </div>

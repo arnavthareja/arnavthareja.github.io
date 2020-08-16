@@ -72,3 +72,35 @@ window.onresize = function() {
     root.style.setProperty('--width-ratio', widthRatio);
     root.style.setProperty('--height-ratio', heightRatio);
 }
+
+function scrollPercent(selector) {
+    el = document.querySelector(selector);
+    var scroll = document.body.scrollTop - el.getBoundingClientRect().top + window.innerHeight / 2; // TODO: fix this
+    var height = el.scrollHeight;
+    return Math.min(Math.max(scroll / height * 100, 0), 100);
+}
+
+window.onscroll = function() {
+    var scroll = document.body.scrollTop || root.scrollTop;
+    var height = root.scrollHeight - root.clientHeight;
+    var scrolled = scroll / height * 100;
+    // document.querySelector('.progress-bar').style.width = scrolled + '%';
+
+    // root.style.setProperty('--width-0', scrolled + '%');
+    // or use sheet.insertRule() or sheet.addRule()
+
+    root.style.setProperty('--width-0', scrollPercent('#experience') + '%');
+    root.style.setProperty('--width-1', scrollPercent('#projects') + '%');
+    //root.style.setProperty('--width-2', scrollPercent('#coursework'));
+    //root.style.setProperty('--width-3', scrollPercent('#resume'));
+
+    if (parseFloat(root.style.getPropertyValue('--width-3')) > 0) {
+        select('Resume');
+    } else if (parseFloat(root.style.getPropertyValue('--width-2')) > 0) {
+        select('Coursework');
+    } else if (parseFloat(root.style.getPropertyValue('--width-1')) > 0) {
+        select('Projects');
+    } else {
+        select('Experience');
+    }
+}
