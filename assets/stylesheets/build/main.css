@@ -218,7 +218,8 @@ body {
   margin: 0;
   padding: 0 10%;
   text-align: center;
-  background: var(--alt-background-color); }
+  background: var(--alt-background-color);
+  /* old, not needed i think: align-items: flex-start !important; */ }
 
 .progress-container {
   width: 100%;

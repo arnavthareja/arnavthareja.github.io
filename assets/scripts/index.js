@@ -75,8 +75,9 @@ window.onresize = function() {
 
 function scrollPercent(selector) {
     el = document.querySelector(selector);
-    var scroll = document.body.scrollTop - el.getBoundingClientRect().top + window.innerHeight / 2; // TODO: fix this
     var height = el.scrollHeight;
+    var scroll = document.body.scrollTop - el.getBoundingClientRect().top; // TODO: fix this
+    //scroll += window.innerHeight * scroll / height;
     return Math.min(Math.max(scroll / height * 100, 0), 100);
 }
 
