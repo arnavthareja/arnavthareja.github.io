@@ -1,18 +1,15 @@
-var selected = 'Projects';
+// TODO: vey slow right now. fix it
+
+var selected = 'Experience';
 var darkModeActive = false;
 const root = document.documentElement;
 var startWidth
 var startHeight
 
-window.onload = function() {
-    startWidth = window.innerWidth;
-    startHeight = window.innerHeight;
-}
-
 function select(id) {
     
     // Return if already selected
-    if (id === selected) {
+    if (id == selected) {
         return;
     }
 
@@ -59,6 +56,38 @@ function toggleDarkMode() {
     }
 }
 
+function scrollPercent(selector) {
+    el = document.querySelector(selector);
+    var height = el.scrollHeight;
+    var scroll = document.body.scrollTop - el.getBoundingClientRect().top + window.innerHeight / 2; // TODO: fix this
+    //scroll += window.innerHeight * scroll / height;
+    return Math.min(Math.max(scroll / height * 100, 0), 100);
+}
+
+function updateCurrentSection() {
+    root.style.setProperty('--width-0', scrollPercent('#experience') + '%');
+    root.style.setProperty('--width-1', scrollPercent('#projects') + '%');
+    root.style.setProperty('--width-2', scrollPercent('#coursework') + '%');
+    root.style.setProperty('--width-3', scrollPercent('#resume') + '%');
+
+    if (parseFloat(root.style.getPropertyValue('--width-3')) > 0) {
+        select('Resume');
+    } else if (parseFloat(root.style.getPropertyValue('--width-2')) > 0) {
+        select('Coursework');
+    } else if (parseFloat(root.style.getPropertyValue('--width-1')) > 0) {
+        select('Projects');
+    } else {
+        select('Experience');
+    }
+}
+
+window.onload = function() {
+    startWidth = window.innerWidth;
+    startHeight = window.innerHeight;
+
+    updateCurrentSection();
+}
+
 window.onresize = function() {
 
     // TODO: Set a minimum value to prevent text from becoming too small
@@ -71,37 +100,17 @@ window.onresize = function() {
 
     root.style.setProperty('--width-ratio', widthRatio);
     root.style.setProperty('--height-ratio', heightRatio);
-}
 
-function scrollPercent(selector) {
-    el = document.querySelector(selector);
-    var height = el.scrollHeight;
-    var scroll = document.body.scrollTop - el.getBoundingClientRect().top; // TODO: fix this
-    //scroll += window.innerHeight * scroll / height;
-    return Math.min(Math.max(scroll / height * 100, 0), 100);
+    updateCurrentSection();
 }
 
 window.onscroll = function() {
+    /*
     var scroll = document.body.scrollTop || root.scrollTop;
     var height = root.scrollHeight - root.clientHeight;
     var scrolled = scroll / height * 100;
-    // document.querySelector('.progress-bar').style.width = scrolled + '%';
+    document.querySelector('.progress-bar').style.width = scrolled + '%';
+    */
 
-    // root.style.setProperty('--width-0', scrolled + '%');
-    // or use sheet.insertRule() or sheet.addRule()
-
-    root.style.setProperty('--width-0', scrollPercent('#experience') + '%');
-    root.style.setProperty('--width-1', scrollPercent('#projects') + '%');
-    //root.style.setProperty('--width-2', scrollPercent('#coursework'));
-    //root.style.setProperty('--width-3', scrollPercent('#resume'));
-
-    if (parseFloat(root.style.getPropertyValue('--width-3')) > 0) {
-        select('Resume');
-    } else if (parseFloat(root.style.getPropertyValue('--width-2')) > 0) {
-        select('Coursework');
-    } else if (parseFloat(root.style.getPropertyValue('--width-1')) > 0) {
-        select('Projects');
-    } else {
-        select('Experience');
-    }
+    updateCurrentSection();
 }

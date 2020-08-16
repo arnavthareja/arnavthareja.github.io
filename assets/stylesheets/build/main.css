@@ -285,18 +285,23 @@ body {
       height: 100%;
       color: var(--main-text-color); }
 
+/*
 #Experience::after {
-  width: var(--width-0); }
+    width: var(--width-0);
+}
 
 #Projects::after {
-  width: var(--width-1); }
+    width: var(--width-1);
+}
 
 #Coursework::after {
-  width: var(--width-2); }
+    width: var(--width-2);
+}
 
 #Resume::after {
-  width: var(--width-3); }
-
+    width: var(--width-3);
+}
+*/
 .section-container {
   width: 100%;
   height: auto;
