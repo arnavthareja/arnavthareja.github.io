@@ -317,7 +317,7 @@ button.menu {
 
 .grid-3 {
     display: grid;
-    grid-gap: 3vw;
+    gap: 1vw;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 1fr;
     grid-auto-flow: row;
@@ -344,7 +344,7 @@ button.menu {
 }
 
 .card {
-    width: 100%;
+    width: calc(100% - 2vw);
     border-radius: 20px;
     background: var(--main-background-color);
     color: var(--main-text-color);
