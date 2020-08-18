@@ -29,29 +29,40 @@
                 </div>
             </div>
             <div class='down-arrow center'>
-                <a href='#portfolio'>
+                <a href='#experience' onclick='select("Experience")'>
                     <div class='arrow'></div>
                 </a>
             </div>
         </div>
-        <!-- Canvas for trianglify background, profile background must be set to transparent in css -->
-        <!-- Set position: fixed for parallax effect, position: absolute for no parallax -->
-        <!-- This div is here so the background keeps the same gradient when initially loaded instead of displayed white before the triangle background is loaded -->
-        <!--
-        <div id="canvasBackground" style="width: 100vw; height: 100vh; z-index: -2; position: absolute; top: 0; left: 0; background: linear-gradient(150deg, #003262, teal);"></div>
-        <canvas id="canvas" style="width: 100vw; height: 100vh; z-index: -1; position: fixed; top: 0; left: 0;"></canvas>
-        -->
-        <div class='portfolio-container flex-horizontal' id='portfolio'>
-            <div class='portfolio-menu flex-vertical'>
-                <!-- TODO: Change to links to scroll down to specified sections and highlight link when scrolled to that section -->
-                <button type="button" id='Experience' class='menu' onclick='select("Experience")'><a href='#experience'><h2 class='title-small small-caps'>Experience</h2></a></button>
-                <button type="button" id='Projects' class='menu selected' onclick='select("Projects")'><a href='#projects'><h2 class='title-small small-caps'>Projects</h2></a></button>
+
+        <div class='portfolio-menu flex-vertical' data-aos='fade-down' data-aos-anchor='#experience' data-aos-anchor-placement='top-top' data-aos-offset='-60'>
+            <!-- TODO: Change to links to scroll down to specified sections and highlight link when scrolled to that section -->
+            <div class='menu-buttons flex-horizontal'>
+                <div class='name-container'>
+                    <p class='text-small'>A</p>
+                    <p class='text-small'>r</p>
+                    <p class='text-small'>n</p>
+                    <p class='text-small'>a</p>
+                    <p class='text-small'>v</p>
+                    <p class='text-small'> </p>
+                    <p class='text-small'>T</p>
+                    <p class='text-small'>h</p>
+                    <p class='text-small'>a</p>
+                    <p class='text-small'>r</p>
+                    <p class='text-small'>e</p>
+                    <p class='text-small'>j</p>
+                    <p class='text-small'>a</p>
+                </div>
+                <button type="button" id='Experience' class='menu selected' onclick='select("Experience")'><a href='#experience'><h2 class='title-small small-caps'>Experience</h2></a></button>
+                <button type="button" id='Projects' class='menu' onclick='select("Projects")'><a href='#projects'><h2 class='title-small small-caps'>Projects</h2></a></button>
                 <button type="button" id='Coursework' class='menu' onclick='select("Coursework")'><a href='#coursework'><h2 class='title-small small-caps'>Coursework</h2></a></button>
                 <button type="button" id='Resume' class='menu' onclick='select("Resume")'><a href='#resume'><h2 class='title-small small-caps'>Resume</h2></a></button>
             </div>
+        </div>
 
-            <div class='portfolio'>
-                <div class='title-container' id='experience'>
+        <div class='portfolio flex-vertical'>
+            <div id='experience'>
+                <div class='title-container center'>
                     <h2 class='title-medium portfolio-title'>Experience</h2>
                 </div>
                 <div class='section-container flex-vertical'>
@@ -108,8 +119,10 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class='title-container' id='projects'>
+            <div id='projects'>
+                <div class='title-container center'>
                     <h2 class='title-medium portfolio-title'>Projects</h2>
                 </div>
                 <div class='section-container grid-3'>
@@ -146,23 +159,41 @@
                             <p class='text-small'>An analysis of samples of popular music in Python. Looked for key features of popular songs and what differentiates them from unpopular music. Trained a classification model using Tensorflow to predict success of a provided music sample.</p>
                         </div>
                     </div>
-                    <!--
                     <div class='project card flex-vertical' data-aos='fade'>
                         <div class='project image-container center'>
                             <img src='assets/images/table-tennis-logo.PNG' class='project image'>
-                            Put an iframe here that reflects this website's current scroll state
                         </div>
                         <div class='project title'>
-                            <p>Personal Website</p>
+                            <p class='title-small'>Personal Website</p>
                         </div>
                         <div class='project description'>
-                            <p>This website.</p>
+                            <p class='text-small'>This website. Written in HTML, SCSS, and JavaScript.<br><br>See the source code <a target='_blank' href='https://github.com/arnavthareja/arnavthareja.github.io'>here</a>.</p>
                         </div>
                     </div>
-                    -->
+                    <div class='project card flex-vertical' data-aos='fade' data-aos-delay='50'>
+                        <div class='project image-container center'>
+                            <img src='assets/images/table-tennis-logo.PNG' class='project image'>
+                        </div>
+                        <div class='project title'>
+                            <p class='title-small'>More on GitHub!</p>
+                        </div>
+                        <div class='project description'>
+                            <p class='text-small'>See more of my projects on my GitHub!<br><br><a target='_blank' href='https://github.com/arnavthareja'>https://github.com/arnavthareja</a></p>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <div id='coursework'>
+
+            </div>
+
+            <div id='resume'>
+
+            </div>
         </div>
+
+        <div class='dark-mode-button center text-small' onclick='toggleDarkMode()'>Toggle Dark Mode</div>
 
         <footer>
             <p class='text-small'>&copy; 2020 Arnav Thareja</p>
@@ -180,18 +211,5 @@
             AOS.init();
         </script>
 
-        <!-- Sample code using trianglify.js for triangle background on profile -->
-        <!--
-        <script src='https://unpkg.com/trianglify@^4/dist/trianglify.bundle.js'></script>
-        <script>
-        const pattern = trianglify({
-            width: window.innerWidth,
-            height: window.innerHeight,
-            seed: "seed",
-            xColors: ["#003262", "teal"]
-        });
-        document.body.appendChild(pattern.toCanvas(document.querySelector("#canvas")));
-        </script>
-        -->
     </body>
 </html>

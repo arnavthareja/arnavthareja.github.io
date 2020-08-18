@@ -22,10 +22,8 @@
     }
   
     // For Internet Explorer
-    & {
-        scrollbar-face-color: $foreground-color;
-        scrollbar-track-color: $background-color;
-    }
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
 }
 
 @mixin font-size($size) {
@@ -52,18 +50,29 @@
     75% { transform: translateY(10px) rotate(45deg); }
 }
 
+@keyframes text-flip {
+    0% { transform: rotateY(0deg); }
+    16%, 100% { transform: rotateY(360deg); }
+}
+
 :root {
     --main-background-color: #003262; /* dark mode: black */
-    --main-text-color: white; /* dark mode: white */
+    --main-background-color-dark: #001631; /* dark mode: black */
+    --main-text-color-rgb: 255, 255, 255; /* dark mode: 255, 255, 255 */
+    --main-text-color: rgb(var(--main-text-color-rgb)); /* dark mode: white */
     --main-background-gradient: linear-gradient(30deg, #003262, #004893); /* dark mode: black */
-    --alt-background-color: #d7cb84; /* dark mode: black */
-    --alt-text-color: #003262; /* dark mode: white */
+    --alt-background-color: #d7cb84; /* dark mode: #202020 */
     --alt-text-color-rgb: 0, 50, 98; /* dark mode: 255, 255, 255 */
-    --box-shadow: 0 5px 15px black; /* dark mode: 0 0 5px white */
+    --alt-text-color: rgb(var(--alt-text-color-rgb)); /* dark mode: white */
+    --box-shadow: 0 5px 15px black; /* dark mode: 0 0 2px white */
     --fly-in-duration: 0.6s;
     --fly-in-timing-function: cubic-bezier(0.27, 0.57, 0.54, 1.02);
     --width-ratio: 1;
     --height-ratio: 1;
+    --width-0: 0;
+    --width-1: 0;
+    --width-2: 0;
+    --width-3: 0;
 }
 
 * {
@@ -131,23 +140,24 @@ body {
     color: var(--main-text-color);
 }
 
+.profile-picture {
+    border-radius: 50%;
+    box-shadow: 0 0 10px black;
+    border: 1.5px solid var(--main-text-color);
+}
+
 .profile-picture-container {
     flex: 4 4 40%;
     height: auto;
-    box-sizing: border-box;
     padding: 4%;
     margin: 0;
-}
 
-.profile-picture {
-    border-radius: 50%;
-    width: 70%;
-    height: auto;
-    box-shadow: 0 0 10px black;
-    border: 1.5px solid var(--main-text-color);
-    margin-left: 20%;
-    box-sizing: border-box;
-    animation: picture-fly-in var(--fly-in-duration) var(--fly-in-timing-function);
+    .profile-picture {
+        width: 70%;
+        height: auto;
+        margin-left: 20%;
+        animation: picture-fly-in var(--fly-in-duration) var(--fly-in-timing-function);
+    }
 }
 
 .profile-description {
@@ -155,7 +165,6 @@ body {
     height: auto;
     padding: 4%;
     padding-right: 10%;
-    box-sizing: border-box;
     margin: auto;
     font-size: 20px;
     animation: profile-fly-in var(--fly-in-duration) var(--fly-in-timing-function);
@@ -177,7 +186,6 @@ body {
             width: 3.5em;
             border-radius: 50%;
             border: 1px solid var(--main-text-color);
-            box-sizing: border-box;
 
             &:hover {
                 cursor: pointer;
@@ -228,39 +236,109 @@ body {
     }
 }
 
-.portfolio-container {
+.portfolio-menu {
     width: 100%;
     height: auto;
-    background: var(--alt-background-color);
-    align-items: flex-start !important;
+    margin: 0;
+    padding: 0;
+    box-shadow: 1px 0 2px var(--alt-text-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--main-background-color-dark);
+    z-index: 5;
 }
 
-.portfolio-menu {
-    flex: 0 0 20%;
+/*
+Not using for now at least
+.portfolio-menu::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: calc(100% - 3px);
+    left: 0;
     width: 100%;
-    height: auto;
-    margin: 3% 0;
-    padding: 0%;
-    box-sizing: border-box;
-    border-right: 2px solid var(--alt-text-color);
-    position: sticky;
-    top: 10%;
+    height: 3px;
+    background-color: var(--main-background-color-dark);
+    z-index: 2;
 }
+*/
+
+.menu-buttons {
+    /* justify-content: center !important; Not needed anymore I think*/
+    z-index: 3;
+    height: auto;
+}
+
+.name-container {
+    flex: 0 0 20%;
+    text-align: center;
+    margin: 0;
+    height: auto;
+    width: 100%;
+
+    p {
+        color: var(--main-text-color);
+        height: auto;
+        width: auto;
+        margin: 0;
+        display: inline-block;
+        text-transform: uppercase;
+        animation: text-flip 6s infinite;
+    }
+}
+
+.name-container:first-child {
+    p:last-child {
+        margin-right: 5vw;
+    }
+
+    @for $i from 1 through 13 { /* 13 was 5 earlier */
+        p:nth-child(#{$i}) {
+            animation-delay: 2s + 100ms * $i;
+        }
+    }
+}
+
+/*
+.name-container:last-child {
+    p:first-child {
+        margin-left: 5vw;
+    }
+
+    Make all of the i into $i if using later
+
+    @for i from 1 through 7 {
+        p:nth-child(#{i}) {
+            animation-delay: 100ms * (i + 5);
+        }
+    }
+}
+*/
 
 .portfolio {
-    flex: 0 0 80%;
     width: 100%;
     height: auto;
+    margin: 0;
+    padding: 0 10%;
     text-align: center;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    align-content: center;
     background: var(--alt-background-color);
+    /* old, not needed i think: align-items: flex-start !important; */
 }
 
-button.menu a, button.menu a h2, .portfolio-title {
+.progress-container {
+    width: 100%;
+    height: 3px;
+    background-color: var(--main-background-color);
+}
+
+.progress-bar {
+    width: 0%;
+    height: 3px;
+    background-color: var(--main-text-color);
+}
+
+.menu a, .menu a h2, .portfolio-title {
     color: var(--alt-text-color);
     display: inline;
     text-decoration: none;
@@ -268,30 +346,28 @@ button.menu a, button.menu a h2, .portfolio-title {
 
 .title-container {
     width: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
 }
 
 .portfolio-title {
-    margin: 6vh 3vw;
+    margin: 8vh 3vw;
     text-align: left;
-    justify-self: flex-start;
     width: 100%;
 }
 
-button.menu {
+.menu {
+    flex: 0 0 15%;
     width: 100%;
     height: 100%;
     background: transparent;
     border: 0;
-    box-sizing: border-box;
     padding: 0;
     margin: 0;
+    position: relative;
+    transition: background 0.2s;
 
     &:hover {
         cursor: pointer;
-        background: rgba(var(--alt-text-color-rgb), 0.1); /* alt text color with alpha of 0.1 */
+        background: rgba(var(--main-text-color-rgb), 0.1); /* alt text color with alpha of 0.1 */
     }
 
     &:focus {
@@ -299,8 +375,23 @@ button.menu {
     }
 
     &.selected, &:active {
-        background: rgba(var(--alt-text-color-rgb), 0.2); /* alt text color with alpha of 0.2 */
+        background: rgba(var(--main-text-color-rgb), 0.2); /* alt text color with alpha of 0.2 */
     }
+
+    /*
+    Not using for now at least
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: calc(100% - 3px);
+        left: 0;
+        width: 0;
+        height: 3px;
+        background-color: var(--main-text-color);
+        z-index: 6;
+    }
+    */
 
     a {
         display: block;
@@ -309,26 +400,48 @@ button.menu {
 
         h2 {
             display: inline-block;
-            text-align: left;
+            text-align: center;
             padding: 3% 10%;
             margin: 0;
-            box-sizing: border-box;
             width: 100%;
             height: 100%;
+            color: var(--main-text-color);
         }
     }
 }
 
+/*
+Not using for now at least
+#Experience::after {
+    width: var(--width-0);
+}
+
+#Projects::after {
+    width: var(--width-1);
+}
+
+#Coursework::after {
+    width: var(--width-2);
+}
+
+#Resume::after {
+    width: var(--width-3);
+}
+*/
+
 .section-container {
     width: 100%;
     height: auto;
-    padding: 0 5% 2% 5%;
-    box-sizing: border-box;
+    padding: 0 4%;
+}
+
+.section-container:last-child {
+    padding-bottom: 2%;
 }
 
 .grid-3 {
     display: grid;
-    grid-gap: 3vw;
+    gap: 1vw;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 1fr;
     grid-auto-flow: row;
@@ -355,11 +468,11 @@ button.menu {
 }
 
 .card {
-    width: 100%;
+    width: calc(100% - 2vw);
     border-radius: 20px;
     background: var(--main-background-color);
     color: var(--main-text-color);
-    margin: 1%;
+    margin: 1vw;
     box-shadow: var(--box-shadow);
 
     a {
@@ -368,7 +481,7 @@ button.menu {
 }
 
 .project.card {
-    height: 100%;
+    height: calc(100% - 2vw);
     padding: 4%;
 }
 
@@ -392,8 +505,8 @@ button.menu {
 
 .project.image-container {
     width: auto;
-    height: 20vh;
-    margin: 1% 0;
+    height: 15vh;
+    margin: 5% 0;
 }
 
 .image {
@@ -415,7 +528,7 @@ button.menu {
 }
 
 .project.title p {
-    margin: 5% 0;
+    margin: 3% 0;
 }
 
 .experience.title p {
@@ -452,10 +565,23 @@ footer {
     color: var(--main-text-color);
     text-align: center;
     padding: 1%;
-    box-sizing: border-box;
 
     p {
         margin: 0;
         padding: 0;
     }
+}
+
+.dark-mode-button {
+    width: auto;
+    height: auto;
+    padding: 1%;
+    background-color: var(--main-background-color-dark);
+    border: 1px solid var(--main-text-color);
+    border-radius: 5px;
+    color: var(--main-text-color);
+    cursor: pointer;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
 }
