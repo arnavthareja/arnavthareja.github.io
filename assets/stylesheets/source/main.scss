@@ -22,10 +22,8 @@
     }
   
     // For Internet Explorer
-    & {
-        scrollbar-face-color: $foreground-color;
-        scrollbar-track-color: $background-color;
-    }
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
 }
 
 @mixin font-size($size) {
@@ -50,6 +48,11 @@
 @keyframes arrow-bounce {
     0%, 50%, 62%, 88%, 100% { transform: translateY(0) rotate(45deg); }
     75% { transform: translateY(10px) rotate(45deg); }
+}
+
+@keyframes text-flip {
+    0% { transform: rotateY(0deg); }
+    16%, 100% { transform: rotateY(360deg); }
 }
 
 :root {
@@ -137,21 +140,24 @@ body {
     color: var(--main-text-color);
 }
 
+.profile-picture {
+    border-radius: 50%;
+    box-shadow: 0 0 10px black;
+    border: 1.5px solid var(--main-text-color);
+}
+
 .profile-picture-container {
     flex: 4 4 40%;
     height: auto;
     padding: 4%;
     margin: 0;
-}
 
-.profile-picture {
-    border-radius: 50%;
-    width: 70%;
-    height: auto;
-    box-shadow: 0 0 10px black;
-    border: 1.5px solid var(--main-text-color);
-    margin-left: 20%;
-    animation: picture-fly-in var(--fly-in-duration) var(--fly-in-timing-function);
+    .profile-picture {
+        width: 70%;
+        height: auto;
+        margin-left: 20%;
+        animation: picture-fly-in var(--fly-in-duration) var(--fly-in-timing-function);
+    }
 }
 
 .profile-description {
@@ -243,6 +249,8 @@ body {
     z-index: 5;
 }
 
+/*
+Not using for now at least
 .portfolio-menu::after {
     content: '';
     display: block;
@@ -254,11 +262,59 @@ body {
     background-color: var(--main-background-color-dark);
     z-index: 2;
 }
+*/
 
 .menu-buttons {
-    justify-content: center !important;
+    /* justify-content: center !important; Not needed anymore I think*/
     z-index: 3;
+    height: auto;
 }
+
+.name-container {
+    flex: 0 0 20%;
+    text-align: center;
+    margin: 0;
+    height: auto;
+    width: 100%;
+
+    p {
+        color: var(--main-text-color);
+        height: auto;
+        width: auto;
+        margin: 0;
+        display: inline-block;
+        text-transform: uppercase;
+        animation: text-flip 6s infinite;
+    }
+}
+
+.name-container:first-child {
+    p:last-child {
+        margin-right: 5vw;
+    }
+
+    @for $i from 1 through 13 { /* 13 was 5 earlier */
+        p:nth-child(#{$i}) {
+            animation-delay: 2s + 100ms * $i;
+        }
+    }
+}
+
+/*
+.name-container:last-child {
+    p:first-child {
+        margin-left: 5vw;
+    }
+
+    Make all of the i into $i if using later
+
+    @for i from 1 through 7 {
+        p:nth-child(#{i}) {
+            animation-delay: 100ms * (i + 5);
+        }
+    }
+}
+*/
 
 .portfolio {
     width: 100%;
@@ -322,6 +378,8 @@ body {
         background: rgba(var(--main-text-color-rgb), 0.2); /* alt text color with alpha of 0.2 */
     }
 
+    /*
+    Not using for now at least
     &::after {
         content: '';
         display: block;
@@ -333,6 +391,7 @@ body {
         background-color: var(--main-text-color);
         z-index: 6;
     }
+    */
 
     a {
         display: block;
@@ -352,6 +411,7 @@ body {
 }
 
 /*
+Not using for now at least
 #Experience::after {
     width: var(--width-0);
 }
