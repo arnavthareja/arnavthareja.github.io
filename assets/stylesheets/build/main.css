@@ -58,7 +58,8 @@
 
 * {
   box-sizing: border-box;
-  font-family: Roboto, Helvetica, Verdana, Tahoma, sans-serif; }
+  font-family: Lato, Roboto, Helvetica, Verdana, Tahoma, sans-serif;
+  /* Old main font was Roboto */ }
 
 html {
   font-size: 100%; }
