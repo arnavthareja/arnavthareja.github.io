@@ -58,8 +58,9 @@
 
 * {
   box-sizing: border-box;
-  font-family: Lato, Roboto, Helvetica, Verdana, Tahoma, sans-serif;
-  /* Old main font was Roboto */ }
+  font-family: Roboto, Helvetica, Verdana, Tahoma, sans-serif;
+  letter-spacing: 0.03em;
+  line-height: 1.2em; }
 
 html {
   font-size: 100%; }
@@ -86,16 +87,20 @@ body {
     background: #cfcfcf; }
 
 .title-xs {
-  font-size: calc(1.3rem * var(--width-ratio)); }
+  font-size: calc(1.3rem * var(--width-ratio));
+  font-family: Lato, Roboto, Helvetica, Verdana, Tahoma, sans-serif; }
 
 .title-small {
-  font-size: calc(1.8rem * var(--width-ratio)); }
+  font-size: calc(1.8rem * var(--width-ratio));
+  font-family: Lato, Roboto, Helvetica, Verdana, Tahoma, sans-serif; }
 
 .title-medium {
-  font-size: calc(3rem * var(--width-ratio)); }
+  font-size: calc(3rem * var(--width-ratio));
+  font-family: Lato, Roboto, Helvetica, Verdana, Tahoma, sans-serif; }
 
 .title-large {
-  font-size: calc(4rem * var(--width-ratio)); }
+  font-size: calc(4rem * var(--width-ratio));
+  font-family: Lato, Roboto, Helvetica, Verdana, Tahoma, sans-serif; }
 
 .text-small {
   font-size: calc(1.1rem * var(--width-ratio)); }
