@@ -77,7 +77,7 @@
 
 * {
     box-sizing: border-box;
-    font-family: Roboto, Helvetica, Verdana, Tahoma, sans-serif;
+    font-family: Lato, Helvetica, Verdana, Tahoma, sans-serif;
     letter-spacing: 0.03em;
     line-height: 1.2em;
 }
@@ -99,22 +99,18 @@ body {
 
 .title-xs {
     @include font-size(1.3rem);
-    font-family: Lato, Roboto, Helvetica, Verdana, Tahoma, sans-serif;
 }
 
 .title-small {
     @include font-size(1.8rem);
-    font-family: Lato, Roboto, Helvetica, Verdana, Tahoma, sans-serif;
 }
 
 .title-medium {
     @include font-size(3rem);
-    font-family: Lato, Roboto, Helvetica, Verdana, Tahoma, sans-serif;
 }
 
 .title-large {
     @include font-size(4rem);
-    font-family: Lato, Roboto, Helvetica, Verdana, Tahoma, sans-serif;
 }
 
 .text-small {
