@@ -110,6 +110,9 @@ body {
 .small-caps {
   font-variant: small-caps; }
 
+.alt-color {
+  color: var(--alt-text-color); }
+
 .profile {
   width: 100%;
   height: 100vh;
@@ -462,6 +465,10 @@ Not using for now at least
   width: auto;
   height: 15vh;
   margin: 5% 0; }
+
+.fa-8x {
+  font-size: 8em !important;
+  border: none !important; }
 
 .image {
   max-height: 99%;
