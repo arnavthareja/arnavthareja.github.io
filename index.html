@@ -5,8 +5,10 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset='UTF-8'>
+        <meta name='color-scheme' content='dark light'>
         
         <link rel='stylesheet' type="text/css" href='assets/stylesheets/build/main.css'>
+        <!-- https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css -->
 
         <!-- Lato font -->
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
@@ -36,7 +38,6 @@
         </div>
 
         <div class='portfolio-menu flex-vertical' data-aos='fade-down' data-aos-anchor='#experience' data-aos-anchor-placement='top-top' data-aos-offset='-60'>
-            <!-- TODO: Change to links to scroll down to specified sections and highlight link when scrolled to that section -->
             <div class='menu-buttons flex-horizontal'>
                 <div class='name-container'>
                     <p class='text-small'>A</p>
@@ -232,7 +233,9 @@
             </div>
         </div>
 
-        <div class='dark-mode-button center text-small' onclick='toggleDarkMode()'>Toggle Dark Mode</div>
+        <div class='dark-mode-slider center' onclick='toggleDarkMode()' data-theme='Light Theme'>
+            <div class='dark-mode-thumb center'><i class='fa fa-sun-o'></i></div>
+        </div>
 
         <footer>
             <p class='text-small'>&copy; 2020 Arnav Thareja</p>

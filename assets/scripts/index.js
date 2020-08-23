@@ -1,9 +1,5 @@
-// TODO: vey slow right now. fix it
-// Maybe implement updateCurrentSection lock while scrolling to section, currently when clicked it updates back to current then to desired, should update straight to desired
-// Might have to change HTML onclicks to event handlers here with a lock that is activate before scrolling and deactivated afterwards
-
 var selected = 'Experience';
-var darkModeActive = false;
+// var darkModeActive = false;
 const root = document.documentElement;
 var initialWidth;
 var initialHeight;
@@ -13,6 +9,7 @@ var mediumBreakpoint = 1440;
 var smallBreakpoint = 768;
 var maxWidthRatio = 1;
 var minWidthRatio = 0.85;
+var slider = document.querySelector('.dark-mode-slider');
 
 function select(id) {
     
@@ -29,39 +26,33 @@ function select(id) {
     selected = id;
 }
 
-function toggleDarkMode() {
-
-    if (darkModeActive) {
-        // Change to light mode
-        root.style.setProperty('--main-background-color', '#003262');
-        root.style.setProperty('--main-background-color-dark', '#001631');
-        root.style.setProperty('--main-text-color-rgb', '255, 255, 255');
-        root.style.setProperty('--main-background-gradient', 'linear-gradient(30deg, #003262, #004893)');
-        root.style.setProperty('--alt-background-color', '#d7cb84');
-        root.style.setProperty('--alt-text-color-rgb', '0, 50, 98');
-        root.style.setProperty('--box-shadow', '0 5px 15px black');
-        darkModeActive = false;
-
-        // Change dark mode button to light mode
-
-        
-        return console.log("Switched to light mode");
+function updateBeforeColor() {
+    if (slider.getAttribute('data-theme') == 'Light Theme' && root.scrollTop > window.innerHeight * 0.04 + 35) {
+        root.style.setProperty('--theme-text-color', '#003262');
+        console.log(true);
     } else {
-        // Change to dark mode
-        root.style.setProperty('--main-background-color', 'black');
-        root.style.setProperty('--main-background-color-dark', 'black');
-        root.style.setProperty('--main-text-color-rgb', '255, 255, 255');
-        root.style.setProperty('--main-background-gradient', 'black');
-        root.style.setProperty('--alt-background-color', '#202020');
-        root.style.setProperty('--alt-text-color-rgb', '255, 255, 255');
-        root.style.setProperty('--box-shadow', '0 0 2px white');
-        darkModeActive = true;
-
-        // Change dark mode button to dark mode
-
-        
-        return console.log("Switched to dark mode");
+        root.style.setProperty('--theme-text-color', 'white');
+        console.log(root.scrollTop);
     }
+}
+
+function toggleDarkMode() {
+    root.classList.toggle("dark-theme");
+
+    document.querySelector('.dark-mode-thumb').classList.toggle("dark-theme");
+    document.querySelector('.dark-mode-thumb i').classList.toggle('fa-sun-o');
+    document.querySelector('.dark-mode-thumb i').classList.toggle('fa-moon-o');
+
+    if (slider.getAttribute('data-theme') == 'Light Theme') {
+        slider.setAttribute('data-theme', 'Dark Theme');
+        slider.setAttribute('data-before-color', 'white');
+    } else {
+        slider.setAttribute('data-theme', 'Light Theme');
+    }
+
+    updateBeforeColor();
+
+    console.log('Toggled dark mode');
 }
 
 function trim(value, min, max) {
@@ -71,8 +62,7 @@ function trim(value, min, max) {
 function scrollPercent(selector) {
     el = document.querySelector(selector);
     var height = el.scrollHeight;
-    var scroll = document.body.scrollTop - el.getBoundingClientRect().top + window.innerHeight / 2; // TODO: fix this
-    //scroll += window.innerHeight * scroll / height;
+    var scroll = document.body.scrollTop - el.getBoundingClientRect().top + window.innerHeight / 2;
     return trim(scroll / height * 100, 0, 100);
 }
 
@@ -98,6 +88,11 @@ window.onload = function() {
     initialHeight = window.innerHeight;
     startWidth = window.innerWidth;
     startHeight = window.innerHeight;
+
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+    if (prefersDarkScheme.matches) {
+        toggleDarkMode();
+    }
 
     updateCurrentSection();
 }
@@ -138,12 +133,6 @@ window.onresize = function() {
 }
 
 window.onscroll = function() {
-    /*
-    var scroll = document.body.scrollTop || root.scrollTop;
-    var height = root.scrollHeight - root.clientHeight;
-    var scrolled = scroll / height * 100;
-    document.querySelector('.progress-bar').style.width = scrolled + '%';
-    */
-
     updateCurrentSection();
+    updateBeforeColor();
 }

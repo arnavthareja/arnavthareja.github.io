@@ -5,8 +5,7 @@ See it here:
 https://arnavthareja.github.io  
 
 # To Do:  
-- Add icon
-- Better dark mode button
+- Add favicon
 - Better coursework section
 - Better resume section
 - Make HTML more semantic
