@@ -5,8 +5,14 @@
 var selected = 'Experience';
 var darkModeActive = false;
 const root = document.documentElement;
-var startWidth
-var startHeight
+var initialWidth;
+var initialHeight;
+var startWidth;
+var startHeight;
+var mediumBreakpoint = 1440;
+var smallBreakpoint = 768;
+var maxWidthRatio = 1;
+var minWidthRatio = 0.85;
 
 function select(id) {
     
@@ -58,12 +64,16 @@ function toggleDarkMode() {
     }
 }
 
+function trim(value, min, max) {
+    return Math.min(Math.max(value, min), max);
+}
+
 function scrollPercent(selector) {
     el = document.querySelector(selector);
     var height = el.scrollHeight;
     var scroll = document.body.scrollTop - el.getBoundingClientRect().top + window.innerHeight / 2; // TODO: fix this
     //scroll += window.innerHeight * scroll / height;
-    return Math.min(Math.max(scroll / height * 100, 0), 100);
+    return trim(scroll / height * 100, 0, 100);
 }
 
 function updateCurrentSection() {
@@ -84,6 +94,8 @@ function updateCurrentSection() {
 }
 
 window.onload = function() {
+    initialWidth = window.innerWidth;
+    initialHeight = window.innerHeight;
     startWidth = window.innerWidth;
     startHeight = window.innerHeight;
 
@@ -92,13 +104,32 @@ window.onload = function() {
 
 window.onresize = function() {
 
-    // TODO: Set a minimum value to prevent text from becoming too small
-
     var newWidth = window.innerWidth;
     var newHeight = window.innerHeight;
 
-    var widthRatio = Math.sqrt(newWidth / startWidth);
-    var heightRatio = Math.sqrt(newHeight / startHeight);
+    var startBigMed = startWidth > mediumBreakpoint;
+    var startSmallMed = startWidth <= mediumBreakpoint;
+    var startBigSmall = startWidth > smallBreakpoint;
+    var startSmallSmall = startWidth <= smallBreakpoint;
+    var newBigMed = newWidth >= mediumBreakpoint;
+    var newSmallMed = newWidth < mediumBreakpoint;
+    var newBigSmall = newWidth >= smallBreakpoint;
+    var newSmallSmall = newWidth < smallBreakpoint;
+
+    if (startBigMed && newSmallMed) {
+        startWidth = mediumBreakpoint;
+    } else if (startSmallMed && newBigMed) {
+        startWidth = initialWidth;
+    } else if (startBigSmall && newSmallSmall) {
+        startWidth = smallBreakpoint;
+    } else if (startSmallSmall && newBigSmall) {
+        startWidth = mediumBreakpoint;
+    }
+
+    startHeight = initialHeight * startWidth / initialWidth;
+
+    var widthRatio = trim(Math.sqrt(newWidth / startWidth), minWidthRatio, maxWidthRatio);
+    var heightRatio = trim(Math.sqrt(newHeight / startHeight), minWidthRatio, maxWidthRatio);
 
     root.style.setProperty('--width-ratio', widthRatio);
     root.style.setProperty('--height-ratio', heightRatio);

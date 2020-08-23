@@ -1,3 +1,6 @@
+$medium-breakpoint: 1440px;
+$small-breakpoint: 768px;
+
 @mixin custom-scrollbar($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
     // For Webkit browsers
     &::-webkit-scrollbar {
@@ -271,9 +274,12 @@ Not using for now at least
 */
 
 .menu-buttons {
-    /* justify-content: center !important; Not needed anymore I think*/
     z-index: 3;
     height: auto;
+
+    @media only screen and (max-width: 1150px) {
+        justify-content: center !important;
+    }
 }
 
 .name-container {
@@ -292,6 +298,10 @@ Not using for now at least
         text-transform: uppercase;
         animation: text-flip 6s infinite;
     }
+
+    @media only screen and (max-width: 1150px) {
+        display: none;
+    }
 }
 
 .name-container:first-child {
@@ -299,7 +309,7 @@ Not using for now at least
         margin-right: 5vw;
     }
 
-    @for $i from 1 through 13 { /* 13 was 5 earlier */
+    @for $i from 1 through 13 { // 13 was 5 earlier
         p:nth-child(#{$i}) {
             animation-delay: 2s + 100ms * $i;
         }
@@ -455,6 +465,16 @@ Not using for now at least
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 1fr;
     grid-auto-flow: row;
+
+    @media only screen {
+        @media (max-width: $medium-breakpoint) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: $small-breakpoint) {
+            grid-template-columns: 1fr;
+        }
+    }
 }
 
 .flex-vertical {
