@@ -29,10 +29,10 @@ function select(id) {
 function updateBeforeColor() {
     if (slider.getAttribute('data-theme') == 'Light Theme' && root.scrollTop > window.innerHeight * 0.04 + 35) {
         root.style.setProperty('--theme-text-color', '#003262');
-        console.log(true);
+        // console.log(true);
     } else {
         root.style.setProperty('--theme-text-color', 'white');
-        console.log(root.scrollTop);
+        // console.log(root.scrollTop);
     }
 }
 
@@ -72,7 +72,9 @@ function updateCurrentSection() {
     root.style.setProperty('--width-2', scrollPercent('#coursework') + '%');
     root.style.setProperty('--width-3', scrollPercent('#resume') + '%');
 
-    if (parseFloat(root.style.getPropertyValue('--width-3')) > 0) {
+    if (document.querySelector('#resume').getBoundingClientRect().bottom + document.querySelector('footer').getBoundingClientRect().height <= window.innerHeight + 100) {
+        select('Resume');
+    } else if (parseFloat(root.style.getPropertyValue('--width-3')) > 0) {
         select('Resume');
     } else if (parseFloat(root.style.getPropertyValue('--width-2')) > 0) {
         select('Coursework');
