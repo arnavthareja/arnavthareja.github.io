@@ -8,7 +8,7 @@ var startHeight;
 var mediumBreakpoint = 1440;
 var smallBreakpoint = 768;
 var maxWidthRatio = 1;
-var minWidthRatio = 0.85;
+var minWidthRatio = Math.sqrt(0.85);
 var slider = document.querySelector('.dark-mode-slider');
 
 function select(id) {

@@ -97,7 +97,7 @@ $small-breakpoint: 768px;
 }
 
 html {
-    font-size: 100%;
+    @include font-size(100%);
 }
 
 html, body {
@@ -622,8 +622,8 @@ footer {
     }
 }
 
-$slider-height: 4vh;
-$slider-width: 4.5vw;
+$slider-height: 2rem;
+$slider-width: 5rem;
 
 .dark-mode-slider {
     width: $slider-width;
@@ -655,8 +655,8 @@ $slider-width: 4.5vw;
 
 .dark-mode-thumb {
     border-radius: 50%;
-    width: $slider-height - 0.2vh;
-    height: $slider-height - 0.2vh;
+    width: calc(#{$slider-height} - 2px);
+    height: calc(#{$slider-height} - 2px);
     transform: translateX(calc(#{$slider-width} / 2 - #{$slider-height} / 2));
     background-color: var(--main-background-color-dark);
     z-index: 2;
