@@ -29,10 +29,8 @@ function select(id) {
 function updateBeforeColor() {
     if (slider.getAttribute('data-theme') == 'Light Theme' && root.scrollTop > window.innerHeight * 0.04 + 35) {
         root.style.setProperty('--theme-text-color', '#003262');
-        // console.log(true);
     } else {
         root.style.setProperty('--theme-text-color', 'white');
-        // console.log(root.scrollTop);
     }
 }
 
@@ -51,6 +49,9 @@ function toggleDarkMode() {
     }
 
     updateBeforeColor();
+
+    // This was causing problems with the animations replaying or stopping in the middle
+    //$('body').hide().show(0);
 
     console.log('Toggled dark mode');
 }

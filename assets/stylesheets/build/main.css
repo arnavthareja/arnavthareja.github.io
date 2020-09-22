@@ -48,27 +48,27 @@
   --width-3: 0;
   --theme-text-color: white;
   scrollbar-width: thin;
-  scrollbar-color: #4082bf #0b2741;
-  scrollbar-face-color: #4082bf;
-  scrollbar-track-color: #0b2741; }
+  scrollbar-color: #444444 black;
+  scrollbar-face-color: #444444;
+  scrollbar-track-color: black; }
   :root::-webkit-scrollbar {
     width: 1.2em;
     height: 100%; }
   :root::-webkit-scrollbar-thumb {
-    background: #4082bf;
+    background: #444444;
     border: 0.36364em solid rgba(0, 0, 0, 0);
     background-clip: padding-box;
     border-radius: 0.6em; }
     :root::-webkit-scrollbar-thumb:hover {
-      background: #366ea3;
+      background: #3a3a3a;
       border: 0.36364em solid rgba(0, 0, 0, 0);
       background-clip: padding-box; }
     :root::-webkit-scrollbar-thumb:active {
-      background: #2d5b86;
+      background: #303030;
       border: 0.36364em solid rgba(0, 0, 0, 0);
       background-clip: padding-box; }
   :root::-webkit-scrollbar-track {
-    background: #0b2741; }
+    background: black; }
 
 :root.dark-theme {
   --main-background-color: black;
@@ -77,29 +77,7 @@
   --main-background-gradient: black;
   --alt-background-color: #1d2020;
   --alt-text-color-rgb: 255, 255, 255;
-  --box-shadow: 0 0 2px white;
-  scrollbar-width: thin;
-  scrollbar-color: #444444 black;
-  scrollbar-face-color: #444444;
-  scrollbar-track-color: black; }
-  :root.dark-theme::-webkit-scrollbar {
-    width: 1.2em;
-    height: 100%; }
-  :root.dark-theme::-webkit-scrollbar-thumb {
-    background: #444444;
-    border: 0.36364em solid rgba(0, 0, 0, 0);
-    background-clip: padding-box;
-    border-radius: 0.6em; }
-    :root.dark-theme::-webkit-scrollbar-thumb:hover {
-      background: #3a3a3a;
-      border: 0.36364em solid rgba(0, 0, 0, 0);
-      background-clip: padding-box; }
-    :root.dark-theme::-webkit-scrollbar-thumb:active {
-      background: #303030;
-      border: 0.36364em solid rgba(0, 0, 0, 0);
-      background-clip: padding-box; }
-  :root.dark-theme::-webkit-scrollbar-track {
-    background: black; }
+  --box-shadow: 0 0 2px white; }
 
 * {
   box-sizing: border-box;

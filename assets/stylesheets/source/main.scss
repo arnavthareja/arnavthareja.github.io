@@ -87,7 +87,8 @@ $small-breakpoint: 768px;
     --width-2: 0;
     --width-3: 0;
     --theme-text-color: white;
-    @include custom-scrollbar(1.2em, hsl(209, 50%, 50%)/*hsl(240, 20%, 34%)*/, hsl(209, 70%, 15%));
+    //@include custom-scrollbar(1.2em, hsl(209, 50%, 50%)/*hsl(240, 20%, 34%)*/, hsl(209, 70%, 15%));
+    @include custom-scrollbar(1.2em, #444444, black);
 }
 
 :root.dark-theme {
@@ -98,7 +99,7 @@ $small-breakpoint: 768px;
     --alt-background-color: #1d2020;
     --alt-text-color-rgb: 255, 255, 255;
     --box-shadow: 0 0 2px white;
-    @include custom-scrollbar(1.2em, #444444, black);
+    //@include custom-scrollbar(1.2em, #444444, black);
 }
 
 * {
