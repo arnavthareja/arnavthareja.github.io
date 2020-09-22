@@ -2,6 +2,9 @@ $medium-breakpoint: 1440px;
 $small-breakpoint: 768px;
 
 @mixin custom-scrollbar($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+    scrollbar-width: thin;
+    scrollbar-color: $foreground-color $background-color;
+    
     // For Webkit browsers
     &::-webkit-scrollbar {
         width: $size;
@@ -10,13 +13,20 @@ $small-breakpoint: 768px;
   
     &::-webkit-scrollbar-thumb {
         background: $foreground-color;
+        border: ($size / 3.3) solid rgba(0, 0, 0, 0);
+        background-clip: padding-box;
+        border-radius: $size / 2;
 
         &:hover {
             background: scale-color($foreground-color, $lightness: -15%);
+            border: ($size / 3.3) solid rgba(0, 0, 0, 0);
+            background-clip: padding-box;
         }
 
         &:active {
             background: scale-color($foreground-color, $lightness: -30%);
+            border: ($size / 3.3) solid rgba(0, 0, 0, 0);
+            background-clip: padding-box;
         }
     }
   
@@ -77,6 +87,7 @@ $small-breakpoint: 768px;
     --width-2: 0;
     --width-3: 0;
     --theme-text-color: white;
+    @include custom-scrollbar(1.2em, hsl(209, 50%, 50%)/*hsl(240, 20%, 34%)*/, hsl(209, 70%, 15%));
 }
 
 :root.dark-theme {
@@ -87,6 +98,7 @@ $small-breakpoint: 768px;
     --alt-background-color: #1d2020;
     --alt-text-color-rgb: 255, 255, 255;
     --box-shadow: 0 0 2px white;
+    @include custom-scrollbar(1.2em, #444444, black);
 }
 
 * {
@@ -108,7 +120,6 @@ html, body {
 
 body {
     overflow-x: hidden;
-    @include custom-scrollbar(0.8%, #9e9ebe, mix(#9e9e9e, white, 50%));
 }
 
 .title-xs {

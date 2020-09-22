@@ -46,7 +46,29 @@
   --width-1: 0;
   --width-2: 0;
   --width-3: 0;
-  --theme-text-color: white; }
+  --theme-text-color: white;
+  scrollbar-width: thin;
+  scrollbar-color: #4082bf #0b2741;
+  scrollbar-face-color: #4082bf;
+  scrollbar-track-color: #0b2741; }
+  :root::-webkit-scrollbar {
+    width: 1.2em;
+    height: 100%; }
+  :root::-webkit-scrollbar-thumb {
+    background: #4082bf;
+    border: 0.36364em solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 0.6em; }
+    :root::-webkit-scrollbar-thumb:hover {
+      background: #366ea3;
+      border: 0.36364em solid rgba(0, 0, 0, 0);
+      background-clip: padding-box; }
+    :root::-webkit-scrollbar-thumb:active {
+      background: #2d5b86;
+      border: 0.36364em solid rgba(0, 0, 0, 0);
+      background-clip: padding-box; }
+  :root::-webkit-scrollbar-track {
+    background: #0b2741; }
 
 :root.dark-theme {
   --main-background-color: black;
@@ -55,7 +77,29 @@
   --main-background-gradient: black;
   --alt-background-color: #1d2020;
   --alt-text-color-rgb: 255, 255, 255;
-  --box-shadow: 0 0 2px white; }
+  --box-shadow: 0 0 2px white;
+  scrollbar-width: thin;
+  scrollbar-color: #444444 black;
+  scrollbar-face-color: #444444;
+  scrollbar-track-color: black; }
+  :root.dark-theme::-webkit-scrollbar {
+    width: 1.2em;
+    height: 100%; }
+  :root.dark-theme::-webkit-scrollbar-thumb {
+    background: #444444;
+    border: 0.36364em solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 0.6em; }
+    :root.dark-theme::-webkit-scrollbar-thumb:hover {
+      background: #3a3a3a;
+      border: 0.36364em solid rgba(0, 0, 0, 0);
+      background-clip: padding-box; }
+    :root.dark-theme::-webkit-scrollbar-thumb:active {
+      background: #303030;
+      border: 0.36364em solid rgba(0, 0, 0, 0);
+      background-clip: padding-box; }
+  :root.dark-theme::-webkit-scrollbar-track {
+    background: black; }
 
 * {
   box-sizing: border-box;
@@ -72,20 +116,7 @@ html, body {
   scroll-behavior: smooth; }
 
 body {
-  overflow-x: hidden;
-  scrollbar-face-color: #9e9ebe;
-  scrollbar-track-color: #cfcfcf; }
-  body::-webkit-scrollbar {
-    width: 0.8%;
-    height: 100%; }
-  body::-webkit-scrollbar-thumb {
-    background: #9e9ebe; }
-    body::-webkit-scrollbar-thumb:hover {
-      background: #7f7fa9; }
-    body::-webkit-scrollbar-thumb:active {
-      background: #626292; }
-  body::-webkit-scrollbar-track {
-    background: #cfcfcf; }
+  overflow-x: hidden; }
 
 .title-xs {
   font-size: calc(1.3rem * var(--width-ratio)); }
