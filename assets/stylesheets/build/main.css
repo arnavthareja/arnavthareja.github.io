@@ -442,6 +442,9 @@ Not using for now at least
   border-radius: 5px;
   border: 2px solid white; }
 
+.image.background {
+  background: white; }
+
 .title {
   width: 100%;
   height: auto;
