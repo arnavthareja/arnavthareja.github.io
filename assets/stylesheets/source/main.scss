@@ -63,11 +63,6 @@ $small-breakpoint: 768px;
     75% { transform: translateY(10px) rotate(45deg); }
 }
 
-@keyframes text-flip {
-    0% { transform: rotateY(0deg); }
-    16%, 100% { transform: rotateY(360deg); }
-}
-
 :root {
     --main-background-color: #003262;
     --main-background-color-dark: #001631;
@@ -316,48 +311,26 @@ Not using for now at least
     height: auto;
     width: 100%;
 
-    p {
-        color: var(--main-text-color);
-        height: auto;
+    a {
         width: auto;
-        margin: 0;
-        display: inline-block;
-        text-transform: uppercase;
-        animation: text-flip 6s infinite;
+        height: auto;
+        margin-right: 5vw;
+        text-decoration: none;
+
+        p {
+            color: var(--main-text-color);
+            height: auto;
+            width: auto;
+            margin: 0;
+            display: inline-block;
+            text-transform: uppercase;
+        }
     }
 
     @media only screen and (max-width: 1150px) {
         display: none;
     }
 }
-
-.name-container:first-child {
-    p:last-child {
-        margin-right: 5vw;
-    }
-
-    @for $i from 1 through 13 { // 13 was 5 earlier
-        p:nth-child(#{$i}) {
-            animation-delay: 2s + 100ms * $i;
-        }
-    }
-}
-
-/*
-.name-container:last-child {
-    p:first-child {
-        margin-left: 5vw;
-    }
-
-    Make all of the i into $i if using later
-
-    @for i from 1 through 7 {
-        p:nth-child(#{i}) {
-            animation-delay: 100ms * (i + 5);
-        }
-    }
-}
-*/
 
 .portfolio {
     width: 100%;

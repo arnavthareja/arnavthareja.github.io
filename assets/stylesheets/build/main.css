@@ -22,12 +22,6 @@
   75% {
     transform: translateY(10px) rotate(45deg); } }
 
-@keyframes text-flip {
-  0% {
-    transform: rotateY(0deg); }
-  16%, 100% {
-    transform: rotateY(360deg); } }
-
 :root {
   --main-background-color: #003262;
   --main-background-color-dark: #001631;
@@ -248,75 +242,22 @@ Not using for now at least
   margin: 0;
   height: auto;
   width: 100%; }
-  .name-container p {
+  .name-container a {
+    width: auto;
+    height: auto;
+    margin-right: 5vw;
+    text-decoration: none; }
+  .name-container a p {
     color: var(--main-text-color);
     height: auto;
     width: auto;
     margin: 0;
     display: inline-block;
-    text-transform: uppercase;
-    animation: text-flip 6s infinite; }
+    text-transform: uppercase; }
   @media only screen and (max-width: 1150px) {
     .name-container {
       display: none; } }
 
-.name-container:first-child p:last-child {
-  margin-right: 5vw; }
-
-.name-container:first-child p:nth-child(1) {
-  animation-delay: 2.1s; }
-
-.name-container:first-child p:nth-child(2) {
-  animation-delay: 2.2s; }
-
-.name-container:first-child p:nth-child(3) {
-  animation-delay: 2.3s; }
-
-.name-container:first-child p:nth-child(4) {
-  animation-delay: 2.4s; }
-
-.name-container:first-child p:nth-child(5) {
-  animation-delay: 2.5s; }
-
-.name-container:first-child p:nth-child(6) {
-  animation-delay: 2.6s; }
-
-.name-container:first-child p:nth-child(7) {
-  animation-delay: 2.7s; }
-
-.name-container:first-child p:nth-child(8) {
-  animation-delay: 2.8s; }
-
-.name-container:first-child p:nth-child(9) {
-  animation-delay: 2.9s; }
-
-.name-container:first-child p:nth-child(10) {
-  animation-delay: 3s; }
-
-.name-container:first-child p:nth-child(11) {
-  animation-delay: 3.1s; }
-
-.name-container:first-child p:nth-child(12) {
-  animation-delay: 3.2s; }
-
-.name-container:first-child p:nth-child(13) {
-  animation-delay: 3.3s; }
-
-/*
-.name-container:last-child {
-    p:first-child {
-        margin-left: 5vw;
-    }
-
-    Make all of the i into $i if using later
-
-    @for i from 1 through 7 {
-        p:nth-child(i) {
-            animation-delay: 100ms * (i + 5);
-        }
-    }
-}
-*/
 .portfolio {
   width: 100%;
   height: auto;
