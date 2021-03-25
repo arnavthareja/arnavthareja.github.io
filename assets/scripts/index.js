@@ -1,5 +1,4 @@
 var selected = 'Experience';
-// var darkModeActive = false;
 const root = document.documentElement;
 var initialWidth;
 var initialHeight;
@@ -38,8 +37,8 @@ function toggleDarkMode() {
     root.classList.toggle("dark-theme");
 
     document.querySelector('.dark-mode-thumb').classList.toggle("dark-theme");
-    document.querySelector('.dark-mode-thumb i').classList.toggle('fa-sun-o');
-    document.querySelector('.dark-mode-thumb i').classList.toggle('fa-moon-o');
+    document.querySelector('.dark-mode-thumb i').classList.toggle('fa-sun');
+    document.querySelector('.dark-mode-thumb i').classList.toggle('fa-moon');
 
     if (slider.getAttribute('data-theme') == 'Light Theme') {
         slider.setAttribute('data-theme', 'Dark Theme');
