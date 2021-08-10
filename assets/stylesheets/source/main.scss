@@ -521,6 +521,22 @@ Not using for now at least
     padding: 4%;
 }
 
+.resume.card {
+    height: 100%;
+
+    .full {
+        display: inline-block;
+        padding: 1% 2%;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+// TODO implement with better color
+// .resume.card:hover {
+//     background: var(--alt-background-color);
+// }
+
 .experience.card {
     height: 100%;
     padding: 1% 2%;
