@@ -11,6 +11,8 @@
         <link rel='stylesheet' type="text/css" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
 
         <!-- Lato font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
 
         <!-- Import AOS Library for card transitions -->
@@ -26,11 +28,11 @@
             </div>
             <div class='profile-description'>
                 <h1 class='title-large'>Arnav Thareja</h1>
-                <p class='text-medium'>Hi! I am a freshman at the University of Washington studying Computer Science in the Paul G. Allen School of Computer Science & Engineering.</p>
+                <p class='text-medium'>Hi! I am a student at the University of Washington studying Computer Science in the Paul G. Allen School of Computer Science & Engineering.</p>
                 <div class="icons">
                     <a target="_blank" href="https://www.linkedin.com/in/arnavthareja/" class='center'><div class='icon center'><i class="fab fa-linkedin fa-2x"></i></div></a>
                     <a target="_blank" href="https://github.com/arnavthareja/" class='center'><div class='icon center'><i class="fab fa-github fa-2x"></i></div></a>
-                    <a target="_blank" href="mailto:arnav.thareja25@gmail.com" class='center'><div class='icon center'><i class="fas fa-envelope fa-2x"></i></div></a>
+                    <a target="_blank" href="mailto:athareja@uw.edu" class='center'><div class='icon center'><i class="fas fa-envelope fa-2x"></i></div></a>
                 </div>
             </div>
             <div class='down-arrow center'>
@@ -74,6 +76,26 @@
                 <div class='section-container flex-vertical'>
                     <div class='experience card flex-horizontal' data-aos='fade'>
                         <div class='experience image-container center'>
+                            <img src='assets/images/prl-logo.jpg' class='experience image background'>
+                        </div>
+                        <div class='experience content flex-vertical'>
+                            <div class='experience title flex-vertical'>
+                                <p class='title-small'>Undergraduate Researcher</p>
+                                <p class='title-xs'>Personal Robotics Lab (May 2021 - Present)</p>
+                            </div>
+                            <div class='experience description'>
+                                <ul>
+                                    <li class='text-small'>Working on multi-agent autonomous navigation and task allocation with <a target="_blank" href="https://mushr.io/" class="plain">MuSHR cars</a></li>
+                                    <li class='text-small'>Designed and implemented algorithms for non-holonomic multi-agent navigation with optimal task allocation in C++</li>
+                                    <li class='text-small'>Built ROS (Robot Operating System) wrappers around algorithms to enable easy interfacing with existing systems</li>
+                                    <li class='text-small'>Sped up robot trajectory comparison framework by 50x by directly analyzing ROS bags through the rosbag Python API</li>
+                                    <li class='text-small'>Demonstrated and tested system capabilities and translation to real-world environments on physical robots</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='experience card flex-horizontal' data-aos='fade'>
+                        <div class='experience image-container center'>
                             <img src='assets/images/husky-robotics-logo.png' class='experience image background'>
                         </div>
                         <div class='experience content flex-vertical'>
@@ -84,9 +106,9 @@
                             <div class='experience description'>
                                 <ul>
                                     <li class='text-small'>Created robot pathfinding and autonomous navigation algorithms for a prototype Mars rover using C++</li>
-                                    <li class='text-small'>Integrated ROS2 (Robot Operating System) into codebase using nodes and topics for navigation plan visualization</li>
+                                    <li class='text-small'>Integrated ROS2 into codebase using nodes and topics for navigation plan visualization</li>
                                     <li class='text-small'>Defined and implemented a navigation algorithm to locate targets based on approximate GPS coordinates</li>
-                                    <li class='text-small'>Defined patterns for driving between two posts given approximate GPS coordinates of the center</li>
+                                    <li class='text-small'>Designed patterns for driving between two posts given GPS coordinates of the center</li>
                                     <li class='text-small'>Leveraged Docker for CI (continuous integration)</li>
                                 </ul>
                             </div>
@@ -103,7 +125,7 @@
                             </div>
                             <div class='experience description'>
                                 <ul>
-                                    <li class='text-small'>Taught students grades K-12 topics in math up to calculus and helped develop an intuitive understanding of math concepts</li>
+                                    <li class='text-small'>Taught K-12 students topics in math up to calculus and helped develop an intuitive understanding of math concepts</li>
                                     <li class='text-small'>Contributed to smooth operation of the center and interacted with parents and prospective customers</li>
                                 </ul>
                             </div>
@@ -155,17 +177,6 @@
                 <div class='section-container grid-3'>
                     <div class='project card flex-vertical' data-aos='fade'>
                         <div class='project image-container center'>
-                            <img src='assets/images/angles-logo.png' class='project image'>
-                        </div>
-                        <div class='project title'>
-                            <p class='title-small'>Angles</p>
-                        </div>
-                        <div class='project description'>
-                            <p class='text-small'>A Chrome extension that suggests news articles of opposite bias when a news website is visited. Made with JavaScript, jQuery, and Google Cloud Natural Language.<br><br>Submission to Dubhacks 2020, placed in the top 3 in the Newsprint track.<br><br>See the Devpost submission <a target="_blank" href="https://devpost.com/software/angles-sqdzlt">here</a> and see the source code <a target="_blank" href="https://github.com/abhaybd/angles">here</a>.</p>
-                        </div>
-                    </div>
-                    <div class='project card flex-vertical' data-aos='fade'>
-                        <div class='project image-container center'>
                             <i class='fas fa-chess fa-8x project image'></i>
                         </div>
                         <div class='project title'>
@@ -173,6 +184,17 @@
                         </div>
                         <div class='project description'>
                             <p class='text-small'>A chess game that can be played in the terminal with minimax agents to play against. Minimax agents use alpha-beta pruning alongside a heuristic-based iterative deepening depth first search algorithm and memoization to improve runtime. Written in Java.<br><br>See the source code <a target="_blank" href="https://www.github.com/arnavthareja/chess">here</a>.</p>
+                        </div>
+                    </div>
+                    <div class='project card flex-vertical' data-aos='fade'>
+                        <div class='project image-container center'>
+                            <img src='assets/images/angles-logo.png' class='project image'>
+                        </div>
+                        <div class='project title'>
+                            <p class='title-small'>Angles</p>
+                        </div>
+                        <div class='project description'>
+                            <p class='text-small'>A Chrome extension that suggests news articles of opposite bias when a news website is visited. Made with JavaScript, jQuery, and Google Cloud Natural Language.<br><br>Submission to Dubhacks 2020, placed in the top 3 in the Newsprint track.<br><br>See the Devpost submission <a target="_blank" href="https://devpost.com/software/angles-sqdzlt">here</a> and see the source code <a target="_blank" href="https://github.com/abhaybd/angles">here</a>.</p>
                         </div>
                     </div>
                     <div class='project card flex-vertical' data-aos='fade'>
@@ -231,10 +253,13 @@
                         <div class='experience description'>
                             <h2 class='title-small'>Completed Coursework</h2>
                             <ul>
-                                <li class='text-small'>Computer Programming I, II (CSE 142, 143)</li>
-                                <li class='text-small'>Foundations of Computing I (CSE 311)</li>
+                                <li class='text-small'>Data Structures and Parallelism (CSE 332)</li>
                                 <li class='text-small'>The Hardware/Software Interface (CSE 351)</li>
+                                <li class='text-small'>Foundations of Computing I - Discrete Math (CSE 311)</li>
+                                <li class='text-small'>Foundations of Computing II - Probability and Statistics (CSE 312)</li>
                                 <li class='text-small'>System and Software Tools (CSE 391)</li>
+                                <li class='text-small'>Computer Programming I, II (CSE 142, 143)</li>
+                                <li class='text-small'>Intro to Differential Equations (MATH 307)</li>
                                 <li class='text-small'>Matrix Algebra with Applications (MATH 308)</li>
                                 <li class='text-small'>Calculus I, II, III (MATH 124, 125, 126)</li>
                             </ul>
@@ -244,9 +269,13 @@
                         <div class='experience description'>
                             <h2 class='title-small'>Planned Coursework</h2>
                             <ul>
-                                <li class='text-small'>Foundations of Computing II (CSE 312)</li>
-                                <li class='text-small'>Data Structures and Parallelism (CSE 332)</li>
-                                <li class='text-small'>Intro to Differential Equations (MATH 307)</li>
+                                <li class='text-small'>Algorithms (CSE 421)</li>
+                                <li class='text-small'>Operating Systems (CSE 451)</li>
+                                <li class='text-small'>Distributed Systems (CSE 452)</li>
+                                <li class='text-small'>Autonomous Robotics (CSE 478)</li>
+                                <li class='text-small'>Computer Vision (CSE 455)</li>
+                                <li class='text-small'>Databases (CSE 344)</li>
+                                <li class='text-small'>Systems Programming (CSE 333)</li>
                             </ul>
                         </div>
                     </div>
@@ -273,7 +302,7 @@
         </div>
 
         <footer>
-            <p class='text-small'>&copy; 2020 Arnav Thareja</p>
+            <p class='text-small'>&copy; 2021 Arnav Thareja</p>
         </footer>
 
         <!-- Link scripts -->

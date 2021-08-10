@@ -154,6 +154,10 @@ body {
     color: var(--alt-text-color);
 }
 
+.plain {
+    text-decoration: none;
+}
+
 .profile {
     width: 100%;
     height: 100vh;
@@ -577,6 +581,14 @@ Not using for now at least
 .description {
     padding: 1%;
     text-align: left;
+    
+    li {
+        line-height: 1.8;
+    }
+
+    p {
+        line-height: 1.5;
+    }
 }
 
 .experience.description {
