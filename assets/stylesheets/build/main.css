@@ -40,6 +40,7 @@
   --alt-text-color-rgb: 0, 50, 98;
   --alt-text-color: rgb(var(--alt-text-color-rgb));
   --box-shadow: 0 5px 15px black;
+  --alt-box-shadow: 0 5px 25px black;
   --fly-in-duration: 0.6s;
   --fly-in-timing-function: cubic-bezier(0.27, 0.57, 0.54, 1.02);
   --width-ratio: 1;
@@ -86,6 +87,7 @@
   --alt-background-color: #1d2020;
   --alt-text-color-rgb: 255, 255, 255;
   --box-shadow: 0 0 2px white;
+  --alt-box-shadow: 0 0 2px yellow;
 }
 
 * {
@@ -501,6 +503,10 @@ Not using for now at least
   padding: 1% 2%;
   height: 100%;
   width: 100%;
+}
+
+.resume.card:hover {
+  box-shadow: var(--alt-box-shadow);
 }
 
 .experience.card {
