@@ -296,7 +296,6 @@ i {
   padding: 0 10%;
   text-align: center;
   background: var(--main-background-color);
-  /* old, not needed i think: align-items: flex-start !important; */
 }
 
 .progress-container {
@@ -425,6 +424,10 @@ i {
   align-items: center;
 }
 
+.align-start {
+  align-items: flex-start;
+}
+
 .center {
   display: flex;
   align-items: center;
@@ -455,6 +458,9 @@ i {
   padding: 1% 2%;
   height: 100%;
   width: 100%;
+}
+.resume.card .full i {
+  margin-right: 20px;
 }
 
 .resume.card:hover {
@@ -502,6 +508,10 @@ i {
 
 .experience.image {
   border: 7px solid white;
+}
+
+.experience.image.small-border {
+  border: 3px solid white;
 }
 
 .project.image {

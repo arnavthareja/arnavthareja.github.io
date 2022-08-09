@@ -6,13 +6,12 @@ $small-breakpoint: 768px;
 @mixin custom-scrollbar($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
     scrollbar-width: thin;
     scrollbar-color: $foreground-color $background-color;
-    
-    // For Webkit browsers
+
     &::-webkit-scrollbar {
         width: $size;
         height: 100%;
     }
-  
+
     &::-webkit-scrollbar-thumb {
         background: $foreground-color;
         border: math.div($size, 3.3) solid rgba(0, 0, 0, 0);
@@ -31,12 +30,11 @@ $small-breakpoint: 768px;
             background-clip: padding-box;
         }
     }
-  
+
     &::-webkit-scrollbar-track {
         background: $background-color;
     }
-  
-    // For Internet Explorer
+
     scrollbar-face-color: $foreground-color;
     scrollbar-track-color: $background-color;
 }
@@ -315,7 +313,6 @@ i {
     padding: 0 10%;
     text-align: center;
     background: var(--main-background-color);
-    /* old, not needed i think: align-items: flex-start !important; */
 }
 
 .progress-container {
@@ -448,6 +445,10 @@ i {
     align-items: center;
 }
 
+.align-start {
+    align-items: flex-start;
+}
+
 .center {
     display: flex;
     align-items: center;
@@ -479,11 +480,14 @@ i {
         padding: 1% 2%;
         height: 100%;
         width: 100%;
+
+        i {
+            margin-right: 20px;
+        }
     }
 }
 
 .resume.card:hover {
-    //TODO Change border thickness
     height: 100%;
 }
 
@@ -528,6 +532,10 @@ i {
 
 .experience.image {
     border: 7px solid white;
+}
+
+.experience.image.small-border {
+    border: 3px solid white;
 }
 
 .project.image {
