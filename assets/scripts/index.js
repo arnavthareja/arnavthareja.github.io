@@ -8,7 +8,6 @@ var mediumBreakpoint = 1440;
 var smallBreakpoint = 768;
 var maxWidthRatio = 1;
 var minWidthRatio = Math.sqrt(0.85);
-var slider = document.querySelector('.dark-mode-slider');
 
 function select(id) {
     
@@ -23,36 +22,6 @@ function select(id) {
 
     // update selected element
     selected = id;
-}
-
-function updateBeforeColor() {
-    if (slider.getAttribute('data-theme') == 'Light Theme' && root.scrollTop > window.innerHeight * 0.04 + 35) {
-        root.style.setProperty('--theme-text-color', '#003262');
-    } else {
-        root.style.setProperty('--theme-text-color', 'white');
-    }
-}
-
-function toggleDarkMode() {
-    root.classList.toggle("dark-theme");
-
-    document.querySelector('.dark-mode-thumb').classList.toggle("dark-theme");
-    document.querySelector('.dark-mode-thumb i').classList.toggle('fa-sun');
-    document.querySelector('.dark-mode-thumb i').classList.toggle('fa-moon');
-
-    if (slider.getAttribute('data-theme') == 'Light Theme') {
-        slider.setAttribute('data-theme', 'Dark Theme');
-        slider.setAttribute('data-before-color', 'white');
-    } else {
-        slider.setAttribute('data-theme', 'Light Theme');
-    }
-
-    updateBeforeColor();
-
-    // This was causing problems with the animations replaying or stopping in the middle
-    //$('body').hide().show(0);
-
-    console.log('Toggled dark mode');
 }
 
 function trim(value, min, max) {
@@ -90,11 +59,6 @@ window.onload = function() {
     initialHeight = window.innerHeight;
     startWidth = window.innerWidth;
     startHeight = window.innerHeight;
-
-    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-    if (prefersDarkScheme.matches) {
-        toggleDarkMode();
-    }
 
     updateCurrentSection();
 }
@@ -136,5 +100,4 @@ window.onresize = function() {
 
 window.onscroll = function() {
     updateCurrentSection();
-    updateBeforeColor();
 }

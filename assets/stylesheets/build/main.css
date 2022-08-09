@@ -31,16 +31,14 @@
   }
 }
 :root {
-  --main-background-color: #003262;
-  --main-background-color-dark: #001631;
+  --main-background-color: black;
+  --main-background-color-dark: black;
   --main-text-color-rgb: 255, 255, 255;
+  --main-background-gradient: black;
+  --alt-background-color: #1d2020;
+  --alt-text-color-rgb: 255, 255, 255;
   --main-text-color: rgb(var(--main-text-color-rgb));
-  --main-background-gradient: linear-gradient(30deg, #003262, #004893);
-  --alt-background-color: #d7cb84;
-  --alt-text-color-rgb: 0, 50, 98;
   --alt-text-color: rgb(var(--alt-text-color-rgb));
-  --box-shadow: 0 5px 15px black;
-  --alt-box-shadow: 0 5px 25px black;
   --fly-in-duration: 0.6s;
   --fly-in-timing-function: cubic-bezier(0.27, 0.57, 0.54, 1.02);
   --width-ratio: 1;
@@ -77,17 +75,6 @@
 }
 :root::-webkit-scrollbar-track {
   background: black;
-}
-
-:root.dark-theme {
-  --main-background-color: black;
-  --main-background-color-dark: black;
-  --main-text-color-rgb: 255, 255, 255;
-  --main-background-gradient: black;
-  --alt-background-color: #1d2020;
-  --alt-text-color-rgb: 255, 255, 255;
-  --box-shadow: 0 0 2px white;
-  --alt-box-shadow: 0 0 2px yellow;
 }
 
 * {
@@ -166,7 +153,6 @@ body {
 
 .profile-picture {
   border-radius: 50%;
-  box-shadow: 0 0 10px black;
   border: 1.5px solid var(--main-text-color);
 }
 
@@ -259,7 +245,6 @@ i {
   height: auto;
   margin: 0;
   padding: 0;
-  box-shadow: 1px 0 2px var(--alt-text-color);
   position: fixed;
   top: 0;
   left: 0;
@@ -267,20 +252,6 @@ i {
   z-index: 5;
 }
 
-/*
-Not using for now at least
-.portfolio-menu::after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: calc(100% - 3px);
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: var(--main-background-color-dark);
-    z-index: 2;
-}
-*/
 .menu-buttons {
   z-index: 3;
   height: auto;
@@ -324,7 +295,7 @@ Not using for now at least
   margin: 0;
   padding: 0 10%;
   text-align: center;
-  background: var(--alt-background-color);
+  background: var(--main-background-color);
   /* old, not needed i think: align-items: flex-start !important; */
 }
 
@@ -412,24 +383,6 @@ Not using for now at least
   font-weight: 200;
 }
 
-/*
-Not using for now at least
-#Experience::after {
-    width: var(--width-0);
-}
-
-#Projects::after {
-    width: var(--width-1);
-}
-
-#Coursework::after {
-    width: var(--width-2);
-}
-
-#Resume::after {
-    width: var(--width-3);
-}
-*/
 .section-container {
   width: 100%;
   height: auto;
@@ -484,7 +437,6 @@ Not using for now at least
   background: var(--main-background-color);
   color: var(--main-text-color);
   margin: 1vw;
-  box-shadow: var(--box-shadow);
 }
 .card a {
   color: inherit;
@@ -506,7 +458,7 @@ Not using for now at least
 }
 
 .resume.card:hover {
-  box-shadow: var(--alt-box-shadow);
+  height: 100%;
 }
 
 .experience.card {
@@ -525,6 +477,10 @@ Not using for now at least
   height: 12vh;
   margin: 1% 0;
   flex: 20%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .project.image-container {
@@ -542,6 +498,13 @@ Not using for now at least
   max-height: 99%;
   max-width: 99%;
   border-radius: 5px;
+}
+
+.experience.image {
+  border: 7px solid white;
+}
+
+.project.image {
   border: 2px solid white;
 }
 
@@ -608,48 +571,6 @@ footer {
 footer p {
   margin: 0;
   padding: 0;
-}
-
-.dark-mode-slider {
-  width: 5rem;
-  height: 2rem;
-  background-color: var(--main-text-color);
-  border-radius: 1rem;
-  border: 2px solid var(--main-text-color);
-  position: fixed;
-  bottom: 15px;
-  right: 15px;
-  cursor: pointer;
-  color: var(--theme-text-color);
-}
-
-.dark-mode-slider::before {
-  content: attr(data-theme);
-  position: absolute;
-  bottom: calc(2rem + 10px);
-  left: 0;
-  right: 0;
-  height: auto;
-  width: auto;
-  text-align: center;
-  color: inherit;
-  font-weight: bold;
-  border-radius: 5px;
-  font-size: calc(0.8rem * var(--width-ratio));
-}
-
-.dark-mode-thumb {
-  border-radius: 50%;
-  width: calc(2rem - 2px);
-  height: calc(2rem - 2px);
-  transform: translateX(calc(5rem / 2 - 2rem / 2));
-  background-color: var(--main-background-color-dark);
-  z-index: 2;
-  transition: transform 0.3s;
-}
-
-.dark-mode-thumb.dark-theme {
-  transform: translateX(calc(-1 * (5rem / 2 - 2rem / 2)));
 }
 
 /*# sourceMappingURL=main.css.map */
