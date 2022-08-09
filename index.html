@@ -14,6 +14,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+
+        <!-- Import AOS Library for card transitions -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     </head>
     <body>
         <div class='profile'>
@@ -71,6 +74,24 @@
                     <div class='experience card flex-horizontal' data-aos='fade'>
                         <div class='experience content flex-vertical'>
                             <div class='experience title flex-vertical'>
+                                <p class='title-small'>Software Engineer Intern</p>
+                                <p class='title-xs'>Oracle Cloud Infrastructure (June 2022 - September 2022)</p>
+                            </div>
+                            <div class='experience description'>
+                                <ul>
+                                    <li class='text-small'>Working on the Virtual Machines Efficiency team within Oracle Cloud Infrastructure (OCI) Compute</li>
+                                    <li class='text-small'>Designing and building a system to monitor usage of reserved compute resources and identify resources to be reclaimed</li>
+                                    <li class='text-small'>Creating internal usage metrics, dashboards, and alarms using Java and Oracle Monitoring Query Language (MQL)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class='experience image-container'>
+                            <img src='assets/images/oracle-logo.png' class='experience image background'>
+                        </div>
+                    </div>
+                    <div class='experience card flex-horizontal' data-aos='fade'>
+                        <div class='experience content flex-vertical'>
+                            <div class='experience title flex-vertical'>
                                 <p class='title-small'>Undergraduate Researcher</p>
                                 <p class='title-xs'>Personal Robotics Lab (May 2021 - Present)</p>
                             </div>
@@ -78,6 +99,7 @@
                                 <ul>
                                     <li class='text-small'>Working on multi-agent autonomous navigation and task allocation with <a target="_blank" href="https://mushr.io/" class="plain">MuSHR cars</a></li>
                                     <li class='text-small'>Designed and implemented algorithms for non-holonomic multi-agent navigation with optimal task allocation in C++</li>
+                                    <li class='text-small'>Extended existing control algorithms to the multi-agent domain to eliminate agent collisions and improve robustness</li>
                                     <li class='text-small'>Built ROS (Robot Operating System) wrappers around algorithms to enable easy interfacing with existing systems</li>
                                     <li class='text-small'>Sped up robot trajectory comparison framework by 50x by directly analyzing ROS bags through the rosbag Python API</li>
                                     <li class='text-small'>Demonstrated and tested system capabilities and translation to real-world environments on physical robots</li>
@@ -108,7 +130,10 @@
                             <img src='assets/images/husky-robotics-logo.png' class='experience image background'>
                         </div>
                     </div>
-                    <div class='experience card flex-horizontal' data-aos='fade'>
+                    <!-- <div class='experience card flex-horizontal' data-aos='fade'>
+                        <div class='experience image-container center'>
+                            <img src='assets/images/mathnasium-logo.png' class='experience image'>
+                        </div>
                         <div class='experience content flex-vertical'>
                             <div class='experience title flex-vertical'>
                                 <p class='title-small'>Math Instructor</p>
@@ -124,7 +149,7 @@
                         <div class='experience image-container'>
                             <img src='assets/images/mathnasium-logo.png' class='experience image'>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
@@ -175,6 +200,41 @@
                         </div>
                         <div class='project description'>
                             <p class='text-small'>See more of my projects on my GitHub!<br><br><a target='_blank' href='https://github.com/arnavthareja'>https://github.com/arnavthareja</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id='coursework'>
+                <div class='title-container center'>
+                    <h2 class='title-medium portfolio-title'>Coursework</h2>
+                </div>
+                <div class='section-container flex-vertical'>
+                    <div class='experience card'>
+                        <div class='experience description'>
+                            <h2 class='title-small'>Selected Coursework</h2>
+                            <ul>
+                                <li class='text-small'>Algorithms (CSE 421)</li>
+                                <li class='text-small'>Machine Learning (CSE 546)</li>
+                                <li class='text-small'>Autonomous Robotics (CSE 478)</li>
+                                <li class='text-small'>Computer Vision (CSE 455)</li>
+                                <li class='text-small'>Databases (CSE 344)</li>
+                                <li class='text-small'>Systems Programming (CSE 333)</li>
+                                <li class='text-small'>Probability (MATH 394/395, CSE 312)</li>
+                                <li class='text-small'>Linear Algebra (MATH 308)</li>
+                                <li class='text-small'>Differential Equations (MATH 307)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class='experience card'>
+                        <div class='experience description'>
+                            <h2 class='title-small'>Planned Coursework</h2>
+                            <ul>
+                                <li class='text-small'>Deep Learning (CSE 490)</li>
+                                <li class='text-small'>Quantum Computation (CSE 490)</li>
+                                <li class='text-small'>Operating Systems (CSE 451)</li>
+                                <li class='text-small'>Distributed Systems (CSE 452)</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
