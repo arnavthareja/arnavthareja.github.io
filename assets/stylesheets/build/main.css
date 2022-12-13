@@ -262,6 +262,32 @@ i {
   }
 }
 
+@keyframes text-fun {
+  0% {
+    transform: rotateY(0deg);
+  }
+  1% {
+    transform: rotateY(360deg);
+  }
+  33% {
+    transform: translateY(0%);
+  }
+  33.1% {
+    transform: translateY(-30%);
+  }
+  33.2% {
+    transform: translateY(0%);
+  }
+  66% {
+    transform: translateX(0%);
+  }
+  66.1% {
+    transform: translateX(50%);
+  }
+  66.2% {
+    transform: translateX(0%);
+  }
+}
 .name-container {
   flex: 0 0 20%;
   text-align: center;
@@ -275,13 +301,52 @@ i {
   margin-right: 5vw;
   text-decoration: none;
 }
+.name-container a p:nth-child(1) {
+  animation-delay: 100.08s;
+}
+.name-container a p:nth-child(2) {
+  animation-delay: 100.16s;
+}
+.name-container a p:nth-child(3) {
+  animation-delay: 100.24s;
+}
+.name-container a p:nth-child(4) {
+  animation-delay: 100.32s;
+}
+.name-container a p:nth-child(5) {
+  animation-delay: 100.4s;
+}
+.name-container a p:nth-child(6) {
+  animation-delay: 100.48s;
+}
+.name-container a p:nth-child(7) {
+  animation-delay: 100.56s;
+}
+.name-container a p:nth-child(8) {
+  animation-delay: 100.64s;
+}
+.name-container a p:nth-child(9) {
+  animation-delay: 100.72s;
+}
+.name-container a p:nth-child(10) {
+  animation-delay: 100.8s;
+}
+.name-container a p:nth-child(11) {
+  animation-delay: 100.88s;
+}
+.name-container a p:nth-child(12) {
+  animation-delay: 100.96s;
+}
+.name-container a p:nth-child(13) {
+  animation-delay: 101.04s;
+}
 .name-container a p {
   color: var(--main-text-color);
   height: auto;
   width: auto;
   margin: 0;
   display: inline-block;
-  text-transform: uppercase;
+  animation: text-fun 100s infinite;
 }
 @media only screen and (max-width: 1150px) {
   .name-container {
@@ -376,8 +441,7 @@ i {
   width: 100%;
   height: 100%;
   color: var(--main-text-color);
-  letter-spacing: 0.15rem;
-  text-transform: uppercase;
+  letter-spacing: 0.07rem;
   line-height: 1.8em;
   font-weight: 200;
 }
